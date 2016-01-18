@@ -1,0 +1,24 @@
+{{ "classie.js" | asset_url | script_tag }}                {{ "cs-skin-border.css" | asset_url | stylesheet_tag }}                {{ "selectFx.js" | asset_url | script_tag }}                    
+<style>
+{% for currencyIndex in (0..currencySize) %}
+    {% assign currencyCode = currencyCodes[currencyIndex] %}
+    .cs-skin-elastic .cs-options li.flag-{{ currencyCode }} span {
+        background-image: url(http://s.xe.com/v2/themes/xe/images/flags/big/{{ currencyCode | downcase }}.png);
+    }
+{% endfor %}
+</style>
+<div class="sca-body-currency">
+ 
+    <div class="sca-currency-style">
+        <select id="currencies" name="currencies" class="cs-select cs-skin-border cs-skin-elastic" style="display: none;">
+            <option value="{{ defaultCurrencyCode }}" data-class="flag-{{ defaultCurrencyCode }}" selected="selected">{{ defaultCurrencyCode }}</option>
+    {% for currencyIndex in (0..currencySize) %}
+        {% assign currencyCode = currencyCodes[currencyIndex] %}
+        {% if currencyCode != defaultCurrencyCode %}
+            <option value="{{ currencyCode }}" data-class="flag-{{ currencyCode }}">{{ currencyCode }}</option>
+        {% endif %}
+    {% endfor %}
+        </select>
+        <div class="clear-both"></div>
+    </div>
+</div>
