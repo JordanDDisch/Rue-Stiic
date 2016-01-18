@@ -1,0 +1,7 @@
+{% assign currencySize = 6 %}
+{% assign currencyCodes = "AUD CAD EUR IDR NZD GBP USD " | rstrip | split: ' ' %}
+{% assign currencySymbols = "$ $ € Rp $ £ $ " | rstrip | split: ' ' %}
+{% assign defaultCurrencyCode = "AUD" %}
+{% assign defaultCurrencySymbol = "$" %}
+
+{% include 'scm-currency-switcher-04' %}
