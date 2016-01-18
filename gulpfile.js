@@ -16,15 +16,10 @@ var gulp            =   require('gulp'),
 gulp.task('styleguide', ['clean:styleguide'], $.shell.task([
         // kss-node [source folder of files to parse] [destination folder] --template [location of template files]
         'kss-node <%= source %> <%= destination %> --template <%= template %> --helpers <%= helpers %> ' +
-        '--css css/bootstrap.min.css ' +
-        '--css css/elements.css ' +
-        '--css css/layout.css ' +
         '--css css/styles.css ' +
-        '--js js/jquery-1.10.2.js ' +
-        '--js js/classie.js ' +
-        '--js js/modernizr.custom.js ' +
-        '--js js/snap.svg-min.js ' +
-        '--js js/components.js '
+        '--js js/jquery-2.2.0.min.js ' +
+        '--js js/superfish.min.js ' +
+        '--js js/components.js'
     ], {
         templateData: {
             source:       'scss',

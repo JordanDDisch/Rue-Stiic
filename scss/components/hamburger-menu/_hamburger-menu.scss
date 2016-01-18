@@ -8,11 +8,16 @@
   font-family: "Courier New", Courier, monospace;
 }
 
+.hamburger-menu--visible,
+ %hamburger-menu--visible {
+   display: block;
+ }
+
 .hamburger-menu__icon,
 %hamburger-menu__icon {
   cursor: pointer;
 
-  @include breakpoint(1015px) {
+  @include breakpoint(1180px) {
     display: none;
   }
 }
@@ -23,6 +28,10 @@
   list-style-type: none;
   margin: 0;
   padding: 1rem 0 0 0;
+
+  @include breakpoint(1180px) {
+    padding: 0;
+  }
 }
 
 .hamburger-menu__list,
