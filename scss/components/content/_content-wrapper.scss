@@ -1,0 +1,11 @@
+.content-wrapper,
+%content-wrapper {
+  width: 100%;
+  overflow: hidden;
+
+  @include breakpoint(1180px) {
+    width: 968px;
+    margin: auto;
+  }
+}
+

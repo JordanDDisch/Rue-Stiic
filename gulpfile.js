@@ -18,7 +18,6 @@ gulp.task('styleguide', ['clean:styleguide'], $.shell.task([
         'kss-node <%= source %> <%= destination %> --template <%= template %> --helpers <%= helpers %> ' +
         '--css css/styles.css ' +
         '--js js/jquery-2.2.0.min.js ' +
-        '--js js/superfish.min.js ' +
         '--js js/components.js'
     ], {
         templateData: {
