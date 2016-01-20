@@ -3,19 +3,13 @@
   position: relative;
 }
 
-.layout-sidebar__open,
-%layout-sidebar__open {
-  transform: translateX(15em);
-  animation: initials .4s .2s
-}
-
 .layout-sidebar__side,
 %layout-sidebar__side {
-  width: 16em;
+  width: 10rem;
   height: 100%;
   position: absolute;
   top: 0;
-  left: -16em;
+  left: -10rem;
   clear: both;
   overflow: hidden;
 

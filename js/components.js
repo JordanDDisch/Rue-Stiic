@@ -4,14 +4,19 @@ jQuery(function($){
 
     $(document).ready(function($) {
 
+        var wrapper = $('.layout-sidebar__wrapper');
+
         $(window).resize(function() {
             if(body.width() < breakpoint) {
             }
         });
 
         $('.hamburger-menu__icon').click(function() {
-            $('.layout-sidebar__wrapper').toggleClass('hamburger-menu--active');
-            $('.layout-sidebar__main').toggleClass('layout-sidebar__open layout-sidebar__close');
+            if(wrapper.hasClass('hamburger-menu--in')) {
+                wrapper.toggleClass('hamburger-menu--out');
+            }
+            wrapper.not('.hamburger-menu--in').toggleClass('hamburger-menu--in');
+
         });
 
         $('.layout-sidebar__side ul li').click(function(event) {

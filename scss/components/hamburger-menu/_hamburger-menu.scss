@@ -8,10 +8,33 @@
   font-family: "Courier New", Courier, monospace;
 }
 
-.hamburger-menu--active,
- %hamburger-menu--active {
-  left: 16em;
- }
+.hamburger-menu--in,
+ %hamburger-menu--in {
+  animation: slide-in 0.5s forwards;
+}
+
+.hamburger-menu--out,
+%hamburger-menu--out {
+  animation: slide-out 0.5s forwards;
+}
+
+@keyframes slide-in {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 10rem;
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    left: 10rem;
+  }
+  100% {
+    left: 0;
+  }
+}
 
 .hamburger-menu__icon,
 %hamburger-menu__icon {
