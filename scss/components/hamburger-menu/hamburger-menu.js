@@ -20,8 +20,10 @@ jQuery(function($){
         });
 
         $('.layout-sidebar__side ul li').click(function(event) {
-            event.preventDefault();
-            $(this).find('ul').toggleClass('hamburger-menu__list--active');
+            if($(this).find('ul').hasClass('hamburger-menu__list--active') == false) {
+                event.preventDefault();
+                $(this).find('ul').addClass('hamburger-menu__list--active');
+            }
         });
     })
 });

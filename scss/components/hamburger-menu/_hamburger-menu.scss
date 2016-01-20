@@ -23,13 +23,13 @@
     left: 0;
   }
   100% {
-    left: 10rem;
+    left: 12rem;
   }
 }
 
 @keyframes slide-out {
   0% {
-    left: 10rem;
+    left: 12rem;
   }
   100% {
     left: 0;
@@ -53,7 +53,7 @@
   background: white;
   list-style-type: none;
   margin: 0;
-  padding: 1rem 0 0 0;
+  padding-left: 1rem;
 
   @include breakpoint(1180px) {
     padding: 0;
@@ -69,14 +69,24 @@
 
 .hamburger-menu__link,
 %hamburger-menu__link {
+  display: block;
   cursor: pointer;
   text-decoration: none;
   color: #888888;
-  margin-bottom: .5rem;
 
   &:hover {
     color: #222222;
   }
+}
+
+.hamburger-menu__link-outer {
+  @extend %hamburger-menu__link;
+  padding: 1rem;
+}
+
+.hamburger-menu__link-inner {
+  @extend %hamburger-menu__link;
+  padding: .5rem;
 }
 
 .hamburger-menu__list--active,
