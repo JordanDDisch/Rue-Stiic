@@ -1,15 +1,20 @@
 .layout-sidebar__wrapper,
 %layout-sidebar__wrapper {
+  width: 100%;
   position: relative;
+
+  @include breakpoint(1180px) {
+    margin: auto;
+  }
 }
 
 .layout-sidebar__side,
 %layout-sidebar__side {
-  width: 12rem;
+  width: 14rem;
   height: 100%;
   position: absolute;
   top: 0;
-  left: -12rem;
+  left: -14rem;
   clear: both;
   overflow: hidden;
 
