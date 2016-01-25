@@ -1,11 +1,8 @@
 <div id="collection">
-  
   {% paginate collection.products by settings.pagination_limit %}
   <!-- Begin collection info -->
   <div class="row">
     <div class="span12">
-      
-     
       
       <!-- Begin breadcrumb -->
       <div class="breadcrumb clearfix">
@@ -69,9 +66,10 @@
   
    
   
-  <div class="row products">
+  <div class="layout-four">
+
     {% for product in collection.products limit: settings.pagination_limit %}
-    {% include 'product-loop' with collection.handle %}
+      {% include 'product-loop' with collection.handle %}
     {% endfor %}
   </div>
   

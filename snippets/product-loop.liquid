@@ -1,6 +1,6 @@
 {% capture collection_handle %}{{ product-loop | handleize }}{% endcapture %}
 {% capture url %}{% if collection_handle != "" %}/collections/{{ product-loop }}{{ product.url }}{% else %}{{ product.url }}{% endif %}{% endcapture %}
-<div class="product{% if settings.products_per_row == "4" %} span3{% endif %}{% if settings.products_per_row == "3" %} span4{% endif %}{% if settings.products_per_row == "2" %} span6{% endif %}">
+<div class="product{% if settings.products_per_row == "4" %} layout-four__item {% endif %}{% if settings.products_per_row == "3" %} span4{% endif %}{% if settings.products_per_row == "2" %} span6{% endif %}">
   
   {% if product.price_min < product.compare_at_price_min %}
     {% if settings.show_sale_circle %}
@@ -8,11 +8,9 @@
     {% endif %}
   {% endif %}
   
-  <div class="image">
     <a href="{{ url }}">
       <img src="{{ product.featured_image | product_img_url: 'large' }}" alt="{{ product.title | escape  }}" />
     </a>
-  </div>
   
   <div class="details">
     <a href="{{ url }}" class="clearfix">
@@ -39,9 +37,9 @@
   </div>
   
 </div>
-{% if settings.products_per_row == "4" %}
+{% comment %}{% if settings.products_per_row == "4" %}
 {% cycle 'clear-product-loop': '', '', '', '<div style="clear:both;"></div>' %}
-{% endif %}
+{% endif %}{% endcomment %}
 {% if settings.products_per_row == "3" %}
 {% cycle 'clear-product-loop': '', '', '<div style="clear:both;"></div>' %}
 {% endif %}

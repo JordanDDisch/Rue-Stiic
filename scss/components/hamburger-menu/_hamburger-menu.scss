@@ -4,8 +4,41 @@
 //
 // Styleguide: components.hamburger-menu
 
-* {
-  font-family: "Courier New", Courier, monospace;
+@import 'components/layout-four/layout-four';
+
+.hamburger-menu__side,
+%hamburger-menu__side {
+  width: 12rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -12rem;
+  clear: both;
+  overflow: hidden;
+
+  @include breakpoint($layout-four__large) {
+    position: static;
+    float: left;
+    width: 20%;
+    box-sizing: border-box;
+  }
+}
+
+.hamburger-menu__main,
+%hamburger-menu__main {
+  overflow: hidden;
+  width: 90%;
+  margin: 0 auto;
+  @include breakpoint($layout-four__large) {
+    width: 80%;
+    float: left;
+    box-sizing: border-box;
+  }
+}
+
+.hamburger-menu__main-container,
+%hamburger-menu__main-container {
+  padding-left: 2rem; 
 }
 
 .hamburger-menu--in,
@@ -43,7 +76,7 @@
   display: block;
   padding: 1em;
 
-  @include breakpoint(1180px) {
+  @include breakpoint($layout-four__large) {
     display: none;
   }
 }
@@ -54,8 +87,7 @@
   list-style-type: none;
   margin: 0;
   padding-left: 1rem;
-
-  @include breakpoint(1180px) {
+  @include breakpoint($layout-four__large) {
     padding: 0;
   }
 }
@@ -93,4 +125,16 @@
 %hamburger-menu__list--active {
   display: block;
 }
+
+.hamburger-menu__icon-container,
+%hamburger-menu__icon-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.hamburger-menu__wrapper,
+%hamburger-menu__wrapper {
+  position: relative;
+}
+
 

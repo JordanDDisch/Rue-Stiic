@@ -4,14 +4,15 @@ jQuery(function($){
 
     $(document).ready(function($) {
 
-        var wrapper = $('.layout-sidebar__wrapper');
+        var wrapper = $('.hamburger-menu__wrapper');
 
         $(window).resize(function() {
-            if(body.width() < breakpoint) {
-            }
+            // if(body.width() < breakpoint) {
+            // }
         });
 
         $('.hamburger-menu__icon').click(function() {
+            console.log('clicked')
             if(wrapper.hasClass('hamburger-menu--in')) {
                 wrapper.toggleClass('hamburger-menu--out');
             }
@@ -19,7 +20,7 @@ jQuery(function($){
 
         });
 
-        $('.layout-sidebar__side ul li').click(function(event) {
+        $('.hamburger-menu__side ul li').click(function(event) {
             if($(this).find('ul').hasClass('hamburger-menu__list--active') == false) {
                 event.preventDefault();
                 $(this).find('ul').addClass('hamburger-menu__list--active');

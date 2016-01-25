@@ -1,4 +1,5 @@
 var gulp            =   require('gulp'),
+    watch           =   require('gulp-watch'),
     gulpShopify     =   require('gulp-shopify-upload'),
     $                = require('gulp-load-plugins')(),
     sass             = require('gulp-sass'),
@@ -78,6 +79,12 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('shopify', function() {
-    return gulp.watch('./+(assets|layout|config|snippets|templates|locales)/**')
+    return watch('./+(assets|layout|config|snippets|templates|locales)/**')
         .pipe(gulpShopify('2b69a48b44c59a48f79b11ed36362f6f', 'e9ca2a5c51bcb09a58984bf572616b55', 'rue-stiic.myshopify.com', '81830017'));
+});
+
+gulp.task('deploy', ['build'], function() {  
+  return gulp.src('./+(assets|layout|config|snippets|templates|locales)/**')
+    .pipe(gulpShopify('API KEY', 'PASSWORD', 'MYSITE.myshopify.com', 'THEME ID'));
+;
 });
