@@ -2,7 +2,7 @@
   {% paginate collection.products by settings.pagination_limit %}
   <!-- Begin collection info -->
   <div class="row">
-    <div class="span12">
+    {% unless collection %}<div class="span12">{% endunless %}
       
       <!-- Begin breadcrumb -->
       <div class="breadcrumb clearfix">

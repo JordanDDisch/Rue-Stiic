@@ -26,7 +26,6 @@
 
 .hamburger-menu__main,
 %hamburger-menu__main {
-  overflow: hidden;
   width: 90%;
   margin: 0 auto;
   @include breakpoint($layout-four__large) {
@@ -38,7 +37,8 @@
 
 .hamburger-menu__main-container,
 %hamburger-menu__main-container {
-  padding-left: 2rem; 
+    padding-left: 0rem;
+
 }
 
 .hamburger-menu--in,
