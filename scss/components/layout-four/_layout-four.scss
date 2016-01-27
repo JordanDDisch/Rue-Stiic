@@ -1,0 +1,61 @@
+// Layout Four
+//
+// Markup: layout-four.html
+//
+// Styleguide: components.layout-four
+
+$layout-four__medium: 600px;
+$layout-four__large: 1180px;
+
+.layout-four, 
+%layout-four {
+	max-width: 730px;
+	margin: 0 auto;
+	@include breakpoint($layout-four__large) {
+		max-width: 100%;
+	}
+}
+
+.layout-four__item, 
+%layout-four__item {
+	float: left;
+	width: 49%;
+	margin-left: 2%;
+	margin-bottom: 1%;
+	&:nth-child(2n+1) {
+		clear: left;
+		margin-left: 0;
+	}
+	@include breakpoint($layout-four__medium) {
+		margin-left: 2%;
+		&:nth-child(2n+1) {
+			clear: none;
+			margin-left: 2%;
+		}
+		&:nth-child(4n+1) {
+			margin-left: 0;
+			clear: left;
+		}
+		width: 23.5%;
+	}
+}
+
+
+.layout-four__description-container,
+%layout-four__description-container {
+	padding: 0.5rem 0.5rem 0.5rem 0.1rem;
+	header {
+		width: 55%; 
+		padding: 0.1rem;
+		border: 1px solid gray;
+		text-align: center;
+		font-size: 1rem;
+		font-weight: bold;
+	}
+	p {
+		font-size: 0.825rem;
+		margin-top: 0.5rem;
+	}
+	span {
+	}
+}

@@ -23,6 +23,9 @@
   {% include 'fb-open-graph-tags' %}
 
   {{ 'styles.css' | asset_url | stylesheet_tag }}
+  {{ 'style.css' | asset_url | stylesheet_tag }}
+
+
   {% if settings.google_header_font != "none" %}
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family={{ settings.google_header_font }}:300,400,700">
   {% endif %}
@@ -75,12 +78,21 @@
   <!-- End toolbar -->
   
   <!-- Begin wrapper -->
-  <div id="transparency" class="wrapper">
-    <div class="row">
+  <div id="transparency" class="{% if collection %}content-wrapper {% endif %} wrapper">
+    {% if collection == null %}<div class="row">{% endif %}
+    {% if collection %}
+    <div class="row"> 
+      <div class="hamburger-menu_icon-container">   
+        <div class="hamburger-menu__icon">
+           <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
+        </div>
+      </div>
+    </div>
+    {% endif %}
       <!-- Begin right navigation -->
       {% if settings.navigation_alignment == "right" %}
       <div class="row" id="header">
-        <div class="span12 border-bottom">
+        <div class="layout-one-column border-bottom">
           <div class="span3 inner-left">
             <div class="logo">
               {% if settings.use_logo %}
@@ -108,7 +120,7 @@
       
       <!-- Begin below navigation -->
       {% if settings.navigation_alignment == "below" %}
-      <div class="span12 clearfix">
+      {% if collection %} <div class="layout-one-column clearfix"> {%endif}
         <div class="logo">
           {% if settings.use_logo %}
           <a href="/"><img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" /></a>
@@ -116,14 +128,13 @@
           <h1><a href="/">{{ shop.name }}</a></h1>
           {% endif %}
         </div> 
-      </div> 
       
       <section id="nav" class="row">
-        <div class="span12">
+        <div class="layout-one-column__nav">
           <nav class="main">
             {% include 'dropdown' %}
           </nav> <!-- /.main -->
-          <nav class="mobile clearfix">
+          <nav class="layout-one-column mobile clearfix">
             {% include 'mobile-menu' %}
           </nav> <!-- /.mobile --> 
         </div> 
@@ -132,27 +143,55 @@
       <!-- End below navigation -->
       
       <!-- Begin content-->
-      <section id="content" class="clearfix">
-          {% if template == "list-collections" %}
-          <div id="collection" class="row">
-            <div class="span12">
-              <h1><span>Product Collections</span></h1>
-            </div> <!-- /.span12 -->
-          </div> <!-- /.row -->
-          
-          <div class="row products masonry">
-            {% for collection in collections %}
-            {% unless collection.all_products_count == 0 or collection.handle == "frontpage" %}
-            {% include 'collection-loop' %}
-            {% endunless %}
+      <section id="content" class="{% if collection %} hamburger-menu__wrapper {% endif %} clearfix ">
+       {% if collection %}
+          <div class="hamburger-menu__side">
+            <ul class="hamburger-menu__list-outer">
+            {% for link in linklists.sidebar-menu.links %}
+              <li>
+                <a href="{{ link.url }}" title="{{ link.title }}" class="hamburger-menu__link-outer {% if link.active %} current{% endif %}">
+                  {{ link.title }} 
+                </a>
+                {% capture child_list_handle %}{{ link.title | handle }}{% endcapture %}
+                    {% if linklists[child_list_handle] and linklists[child_list_handle].links.size > 0 %}
+                    <ul class="hamburger-menu__list">
+                      {% for l in linklists[child_list_handle].links %}
+                      <li><a class="hamburger-menu__link-inner" href="{{ l.url }}">{{ l.title }}</a></li>
+                      {% endfor %}
+                    </ul>
+                    {% endif %}
+              </li>
             {% endfor %}
-          </div> <!-- /#collection.row -->
-          {% else %}
-          {{ content_for_layout }}
-          {% endif %}
+            </ul>
+          </div>
+        {% endif %}
+
+        {% if collection %} 
+          <div class="hamburger-menu__main-container"> 
+            <div class="hamburger-menu__main">
+        {% endif %}  
+        {% if template == "list-collections" %}
+            <div id="collection" class="row">
+              <div class="span12">
+                <h1><span>Product Collections</span></h1>
+              </div> <!-- /.span12 -->
+            </div> <!-- /.row -->
+
+            <div class="row products masonry">
+              {% for collection in collections %}
+                {% unless collection.all_products_count == 0 or collection.handle == "frontpage" %}
+                  {% include 'collection-loop' %}
+                {% endunless %}
+              {% endfor %}
+            </div> <!-- /#collection.row -->
+            {% else %}
+            {{ content_for_layout }}
+            {% endif %}
+          </div>
+        </div>  
       </section>
       <!-- End content-->
-      
+      </div>
     </div>
   </div>
   <!-- End wrapper -->
@@ -176,7 +215,7 @@
         </div>
         {% endif %}
         <!-- End latest blog post -->
-        
+
         <!-- Begin footer navigation -->
         <div class="span4 footer-menu">
           <h4>{{ settings.footer_linklist_title }}</h4>
@@ -263,12 +302,13 @@
   {{ 'jquery.tweet.js' | asset_url | script_tag }}
   {{ 'jquery.fancybox.js' | asset_url | script_tag }}
   {{ 'scripts.js' | asset_url | script_tag }}
+  {{ 'components.js' | asset_url | script_tag }}
   
   {% if template contains 'product' %}
   
   <script src="http://cdn.shopify.com/s/files/1/0243/7257/files/jquery-1.10.2.min.js?743"></script>
-	<script src="http://cdn.shopify.com/s/files/1/0243/7257/files/modernizr.custom.js?743"></script>
-  	<script src="http://cdn.shopify.com/s/files/1/0243/7257/files/modernizr.custom.js?743"></script>
+  <script src="http://cdn.shopify.com/s/files/1/0243/7257/files/modernizr.custom.js?743"></script>
+    <script src="http://cdn.shopify.com/s/files/1/0243/7257/files/modernizr.custom.js?743"></script>
 
   
   <script>
