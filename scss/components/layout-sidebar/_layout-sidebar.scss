@@ -1,21 +1,20 @@
 .layout-sidebar__wrapper,
 %layout-sidebar__wrapper {
+  width: 100%;
   position: relative;
-}
 
-.layout-sidebar__open,
-%layout-sidebar__open {
-  transform: translateX(15em);
-  animation: initials .4s .2s
+  @include breakpoint(1180px) {
+    margin: auto;
+  }
 }
 
 .layout-sidebar__side,
 %layout-sidebar__side {
-  width: 16em;
+  width: 14rem;
   height: 100%;
   position: absolute;
   top: 0;
-  left: -16em;
+  left: -14rem;
   clear: both;
   overflow: hidden;
 

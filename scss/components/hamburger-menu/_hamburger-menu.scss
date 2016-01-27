@@ -9,15 +9,37 @@
   font-family: "Courier New", Courier, monospace;
 }
 
-.hamburger-menu--active,
- %hamburger-menu--active {
-  left: 16em;
- }
+.hamburger-menu--in,
+ %hamburger-menu--in {
+  animation: slide-in 0.5s forwards;
+}
+
+.hamburger-menu--out,
+%hamburger-menu--out {
+  animation: slide-out 0.5s forwards;
+}
+
+@keyframes slide-in {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 14rem;
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    left: 14rem;
+  }
+  100% {
+    left: 0;
+  }
+}
 
 .hamburger-menu__icon,
 %hamburger-menu__icon {
   cursor: pointer;
-  float: left;
   display: block;
   padding: 1em;
 
@@ -31,7 +53,7 @@
   background: white;
   list-style-type: none;
   margin: 0;
-  padding: 1rem 0 0 0;
+  padding-left: 1rem;
 
   @include breakpoint(1180px) {
     padding: 0;
@@ -47,14 +69,24 @@
 
 .hamburger-menu__link,
 %hamburger-menu__link {
+  display: block;
   cursor: pointer;
   text-decoration: none;
   color: #888888;
-  margin-bottom: .5rem;
 
   &:hover {
     color: #222222;
   }
+}
+
+.hamburger-menu__link-outer {
+  @extend %hamburger-menu__link;
+  padding: 1rem;
+}
+
+.hamburger-menu__link-inner {
+  @extend %hamburger-menu__link;
+  padding: .5rem;
 }
 
 .hamburger-menu__list--active,
