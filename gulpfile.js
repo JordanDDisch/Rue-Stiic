@@ -57,7 +57,7 @@ gulp.task('watch', ['styles', 'scripts', 'styleguide'], function() {
 });
 
 gulp.task('styles', function() {
-    return gulp.src('scss/styles.scss')
+    return gulp.src('scss/style.scss')
         .pipe(include())
         .pipe(sass())
         .pipe(autoprefixer({
@@ -65,7 +65,7 @@ gulp.task('styles', function() {
             cascade: false
         }))
         .pipe(minifyCSS())
-        .pipe(gulp.dest('css')).pipe(browserSync.reload({stream: true}));
+        .pipe(gulp.dest('assets')).pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('default', function(){

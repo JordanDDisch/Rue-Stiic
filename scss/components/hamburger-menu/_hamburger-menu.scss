@@ -57,13 +57,13 @@
     left: 0;
   }
   100% {
-    left: 12rem;
+    left: 14rem;
   }
 }
 
 @keyframes slide-out {
   0% {
-    left: 12rem;
+    left: 14rem;
   }
   100% {
     left: 0;
@@ -73,7 +73,6 @@
 .hamburger-menu__icon,
 %hamburger-menu__icon {
   cursor: pointer;
-  float: left;
   display: block;
   padding: 1em;
 

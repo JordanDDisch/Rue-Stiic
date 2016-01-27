@@ -1,8 +1,8 @@
-jQuery(function($){
+jQuery(function ($) {
     var sf, body;
     var breakpoint = 1180;
 
-    $(document).ready(function($) {
+    $(document).ready(function ($) {
 
         var wrapper = $('.hamburger-menu__wrapper');
 
