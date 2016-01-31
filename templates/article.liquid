@@ -23,7 +23,7 @@
       
       {% if article.comments.size > 0 or comment.created_at %}
       <h2 class="comment-title">Comments</h3>
-      
+
       {% if comment and comment.created_at %}
         <div id="comment-{{ comment.id }}" class="comment border-bottom clearfix">
           <h3 class="author"><strong>{{ comment.author }}</strong> on <span class="date">{{ comment.created_at | date: "%B %d %Y at %I:%M%p" }}</span></h3>

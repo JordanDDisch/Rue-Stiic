@@ -1,25 +1,22 @@
-.layout-sidebar__wrapper,
-%layout-sidebar__wrapper {
-  width: 996px;
-  margin: auto;
-}
+@import 'components/layout-four/layout-four';
 
 .layout-sidebar__side,
 %layout-sidebar__side {
-  position: fixed;
-  width: 200px;
-  height: 100%;
-  overflow: auto;
-  top: 0;
-  z-index: 9999;
+
+  display: none;
+
+  @include breakpoint($layout-four__large) {
+    display: block;
+    width: 30%;
+    float: left;
+  }
 }
 
 .layout-sidebar__main,
 %layout-sidebar__main {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 200px;
-  padding-left: 1rem;
+
+  @include breakpoint($layout-four__large) {
+    width: 70%;
+    float: left;
+  }
 }
