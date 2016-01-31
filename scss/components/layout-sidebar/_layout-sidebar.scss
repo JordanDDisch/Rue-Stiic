@@ -7,7 +7,7 @@
 
   @include breakpoint($layout-four__large) {
     display: block;
-    width: 30%;
+    width: 18%;
     float: left;
   }
 }
@@ -16,7 +16,7 @@
 %layout-sidebar__main {
 
   @include breakpoint($layout-four__large) {
-    width: 70%;
+    width: 82%;
     float: left;
   }
 }
