@@ -1,25 +1,38 @@
 .layout-sidebar__wrapper,
 %layout-sidebar__wrapper {
-  width: 996px;
-  margin: auto;
+  position: relative;
+}
+
+.layout-sidebar__open,
+%layout-sidebar__open {
+  transform: translateX(15em);
+  animation: initials .4s .2s
 }
 
 .layout-sidebar__side,
 %layout-sidebar__side {
-  position: fixed;
-  width: 200px;
+  width: 16em;
   height: 100%;
-  overflow: auto;
+  position: absolute;
   top: 0;
-  z-index: 9999;
+  left: -16em;
+  clear: both;
+  overflow: hidden;
+
+  @include breakpoint(1180px) {
+    position: static;
+    float: left;
+    width: 20%;
+    box-sizing: border-box;
+  }
 }
 
 .layout-sidebar__main,
 %layout-sidebar__main {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 200px;
-  padding-left: 1rem;
+
+  @include breakpoint(1180px) {
+    width: 80%;
+    float: left;
+    box-sizing: border-box;
+  }
 }

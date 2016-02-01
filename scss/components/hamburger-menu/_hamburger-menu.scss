@@ -8,11 +8,19 @@
   font-family: "Courier New", Courier, monospace;
 }
 
+.hamburger-menu--active,
+ %hamburger-menu--active {
+  left: 16em;
+ }
+
 .hamburger-menu__icon,
 %hamburger-menu__icon {
   cursor: pointer;
+  float: left;
+  display: block;
+  padding: 1em;
 
-  @include breakpoint(1015px) {
+  @include breakpoint(1180px) {
     display: none;
   }
 }
@@ -23,17 +31,22 @@
   list-style-type: none;
   margin: 0;
   padding: 1rem 0 0 0;
+
+  @include breakpoint(1180px) {
+    padding: 0;
+  }
 }
 
 .hamburger-menu__list,
 %hamburger-menu__list {
   list-style-type: none;
   margin: 0;
+  display: none;
 }
 
 .hamburger-menu__link,
 %hamburger-menu__link {
-  display: block;
+
   cursor: pointer;
   text-decoration: none;
   color: #888888;
@@ -42,5 +55,10 @@
   &:hover {
     color: #222222;
   }
+}
+
+.hamburger-menu__list--active,
+%hamburger-menu__list--active {
+  display: block;
 }
 
