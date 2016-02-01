@@ -1,18 +1,19 @@
-jQuery(function($){
+jQuery(function ($) {
     var sf, body;
     var breakpoint = 1180;
 
-    $(document).ready(function($) {
+    $(document).ready(function ($) {
 
         $('.hamburger-menu__icon').click(function() {
-            $('.layout-sidebar__wrapper').toggleClass('hamburger-menu--active');
-            $('.layout-sidebar__main').toggleClass('layout-sidebar__open layout-sidebar__close');
+            $(".content-wrapper").toggleClass("content-wrapper--active");
+            $(".hamburger-menu__icon-container").toggleClass("content-wrapper--active");
+            $(".hamburger-menu").toggleClass("hamburger-menu--active");
         });
 
-        $('.layout-sidebar__side ul li').click(function(event) {
-            if($(this).children().length > 1) {
+        $('.hamburger-menu ul li').click(function(event) {
+            if($(this).find('ul').hasClass('hamburger-menu__list--active') == false) {
                 event.preventDefault();
-                $(this).find('ul').toggleClass('hamburger-menu__list--active');
+                $(this).find('ul').addClass('hamburger-menu__list--active');
             }
         });
     })

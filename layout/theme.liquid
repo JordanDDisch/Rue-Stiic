@@ -23,6 +23,8 @@
   {% include 'fb-open-graph-tags' %}
 
   {{ 'styles.css' | asset_url | stylesheet_tag }}
+  {{ 'style.css' | asset_url | stylesheet_tag }}
+
   {% if settings.google_header_font != "none" %}
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family={{ settings.google_header_font }}:300,400,700">
   {% endif %}
@@ -45,8 +47,35 @@
   
 </head>
 
+
 <body>
-  
+
+  <div style="overflow: hidden;">
+  <div class="hamburger-menu__icon-container">
+    <div class="hamburger-menu__icon">
+       <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
+    </div>
+  </div>
+  <div class="hamburger-menu">
+    <ul class="hamburger-menu__list-outer">
+    {% for link in linklists.sidebar-menu.links %}
+      <li>
+        <a href="{{ link.url }}" title="{{ link.title }}" class="hamburger-menu__link-outer {% if link.active %} current{% endif %}">
+          {{ link.title }}
+        </a>
+        {% capture child_list_handle %}{{ link.title | handle }}{% endcapture %}
+            {% if linklists[child_list_handle] and linklists[child_list_handle].links.size > 0 %}
+            <ul class="hamburger-menu__list">
+              {% for l in linklists[child_list_handle].links %}
+              <li><a class="hamburger-menu__link-inner" href="{{ l.url }}">{{ l.title }}</a></li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+
   <!-- Begin toolbar -->
   <div class="toolbar-wrapper">
     <div class="toolbar clearfix">
@@ -73,90 +102,149 @@
     </div>
   </div>
   <!-- End toolbar -->
-  
+
   <!-- Begin wrapper -->
-  <div id="transparency" class="wrapper">
-    <div class="row">
-      <!-- Begin right navigation -->
-      {% if settings.navigation_alignment == "right" %}
-      <div class="row" id="header">
-        <div class="span12 border-bottom">
-          <div class="span3 inner-left">
-            <div class="logo">
-              {% if settings.use_logo %}
-              <a href="/"><img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" /></a>
-              {% else %}
-              <h1><a href="/">{{ shop.name }}</a></h1>
-              {% endif %}
+    <div id="transparency" class="content-wrapper">
+      <div class="hamburger-menu__wrapper">
+
+        <!-- Begin right navigation -->
+        {% if settings.navigation_alignment == "right" %}
+        <div class="row" id="header">
+          <div class="layout-one-column border-bottom">
+            <div class="span3 inner-left">
+              <div class="logo">
+                {% if settings.use_logo %}
+                <a href="/"><img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" /></a>
+                {% else %}
+                <h1><a href="/">{{ shop.name }}</a></h1>
+                {% endif %}
+              </div> 
             </div> 
+            
+            <section id="nav">
+              <div class="span9 inner-right">
+                <nav class="main">
+                  {% include 'dropdown' %}
+                </nav> 
+                <nav class="mobile clearfix">
+                  {% include 'mobile-menu' %}
+                </nav>
+              </div> 
+            </section> 
           </div> 
-          
-          <section id="nav">
-            <div class="span9 inner-right">
-              <nav class="main">
-                {% include 'dropdown' %}
-              </nav> 
-              <nav class="mobile clearfix">
-                {% include 'mobile-menu' %}
-              </nav>
-            </div> 
-          </section> 
         </div> 
-      </div> 
-      {% endif %}
-      <!-- End right navigation -->
-      
-      <!-- Begin below navigation -->
-      {% if settings.navigation_alignment == "below" %}
-      <div class="span12 clearfix">
-        <div class="logo">
+        {% endif %}
+        <!-- End right navigation -->
+        
+        <!-- Begin below navigation -->
+        {% if settings.navigation_alignment == "below" %}
+
+        {% if collection %} <div class="layout-one-column clearfix"> {% endif %}
+          <div class="logo">
           {% if settings.use_logo %}
-          <a href="/"><img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" /></a>
+              <a href="/"><img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" /></a>
           {% else %}
-          <h1><a href="/">{{ shop.name }}</a></h1>
+              <h1><a href="/">{{ shop.name }}</a></h1>
           {% endif %}
-        </div> 
-      </div> 
-      
-      <section id="nav" class="row">
-        <div class="span12">
-          <nav class="main">
-            {% include 'dropdown' %}
-          </nav> <!-- /.main -->
-          <nav class="mobile clearfix">
-            {% include 'mobile-menu' %}
-          </nav> <!-- /.mobile --> 
-        </div> 
-      </section> 
-      {% endif %}
-      <!-- End below navigation -->
-      
-      <!-- Begin content-->
-      <section id="content" class="clearfix">
+          </div> 
+
+        
+        <section id="nav" class="row">
+          <div class="layout-one">
+            <nav class="main">
+              {% include 'dropdown' %}
+            </nav> <!-- /.main -->
+            <nav class="mobile clearfix">
+              {% include 'mobile-menu' %}
+            </nav> <!-- /.mobile --> 
+          </div> 
+        </section> 
+        {% endif %}
+        <!-- End below navigation -->
+        
+        <!-- Begin content-->
+        <section id="content" class="clearfix layout-container">
+          {% if collection %} 
+          {% comment %} begin description {% endcomment %}
+          <div class="row">
+            {% unless collection %}<div class="span12">{% endunless %}
+              
+              <!-- Begin breadcrumb -->
+             {% comment %} <div class="breadcrumb clearfix">
+                <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ shop.url }}" title="{{ shop.name | escape }}" itemprop="url"><span itemprop="title">Home</span></a></span> 
+                <span class="arrow-space">&#62;</span>
+                <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ collection.url }}" title="{{ collection.title | escape }}" itemprop="url"><span itemprop="title">{{ collection.title }}</span></a></span>       
+                
+                {% if current_tags %}
+                  {% for tag in current_tags %}
+                    <span class="arrow-space">&#62;</span>
+                    <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/collections/{% if collection.handle != blank %}{{ collection.handle }}{% else %}all{% endif %}/{{ tag | handleize }}" title="{{ tag | escape }}" itemprop="url"><span itemprop="title">{{ tag }}</span></a></span>       
+                  {% endfor %}
+                {% endif %}
+                
+                {% if paginate.pages != 0 %}      
+                  <span class="arrow-space">&#62;</span> <strong>Page {{ paginate.current_page }} of {{ paginate.pages }}</strong>
+                {% endif %}
+              </div>{% endcomment %}
+              <!-- End breadcrumb -->
+              
+         
+              
+              <!-- Begin sort collection -->
+              <div class="clearfix">
+                <h1 class="collection-title">{{ collection.title }}</h1>
+                {% if settings.collection_tags %}
+                  {% capture col_url%}{% if collection.url.size == 0 %}/collections/all{%else%}{{collection.url}}{%endif%}{%endcapture%}
+                  {% if collection.all_tags.size > 0 %}
+                  <div class="browse-tags">
+                    <label>Browse:</label>
+                    <select name="collection_tags" id="collection_tags" class="loc_on_change">
+                      <option value="{{ col_url }}">All items</option>
+                      {% for tag in collection.all_tags %}
+                        <option value="{{col_url}}/{{ tag | handle }}"{% if current_tags contains tag %} selected="selected"{%endif%}>{{ tag }}</option>
+                      {% endfor %}
+                    </select>
+                  </div>
+                  {% endif %}
+                {% endif %}
+              </div>
+              <!-- End sort collection -->
+              
+              <!-- Begin collection description -->
+              {% if collection.description != "" %}
+                {{ collection.description }}
+              {% endif %}
+              <!-- End collection description -->
+              
+            </div>
+          </div>
+          {% comment %} end description {% endcomment %}
+          {% endif %}  
           {% if template == "list-collections" %}
-          <div id="collection" class="row">
-            <div class="span12">
-              <h1><span>Product Collections</span></h1>
-            </div> <!-- /.span12 -->
-          </div> <!-- /.row -->
-          
-          <div class="row products masonry">
-            {% for collection in collections %}
-            {% unless collection.all_products_count == 0 or collection.handle == "frontpage" %}
-            {% include 'collection-loop' %}
-            {% endunless %}
-            {% endfor %}
-          </div> <!-- /#collection.row -->
-          {% else %}
-          {{ content_for_layout }}
-          {% endif %}
-      </section>
-      <!-- End content-->
-      
+              <div id="collection" class="row">
+                <div class="span12">
+                  <h1><span>Product Collections</span></h1>
+                </div> <!-- /.span12 -->
+              </div> <!-- /.row -->
+
+              <div class="row products masonry">
+                {% for collection in collections %}
+                  {% unless collection.all_products_count == 0 or collection.handle == "frontpage" %}
+                    {% include 'collection-loop' %}
+                  {% endunless %}
+                {% endfor %}
+              </div> <!-- /#collection.row -->
+              {% else %}
+              {{ content_for_layout }}
+              {% endif %} 
+        </section>
+        <!-- End content-->
+        </div>
+      </div>
     </div>
   </div>
   <!-- End wrapper -->
-  
+  </div>
   <!-- Begin footer -->
   <div class="footer-wrapper">
     <footer>
@@ -176,7 +264,7 @@
         </div>
         {% endif %}
         <!-- End latest blog post -->
-        
+
         <!-- Begin footer navigation -->
         <div class="span4 footer-menu">
           <h4>{{ settings.footer_linklist_title }}</h4>
@@ -263,12 +351,13 @@
   {{ 'jquery.tweet.js' | asset_url | script_tag }}
   {{ 'jquery.fancybox.js' | asset_url | script_tag }}
   {{ 'scripts.js' | asset_url | script_tag }}
+  {{ 'components.js' | asset_url | script_tag }}
   
   {% if template contains 'product' %}
   
   <script src="http://cdn.shopify.com/s/files/1/0243/7257/files/jquery-1.10.2.min.js?743"></script>
-	<script src="http://cdn.shopify.com/s/files/1/0243/7257/files/modernizr.custom.js?743"></script>
-  	<script src="http://cdn.shopify.com/s/files/1/0243/7257/files/modernizr.custom.js?743"></script>
+  <script src="http://cdn.shopify.com/s/files/1/0243/7257/files/modernizr.custom.js?743"></script>
+    <script src="http://cdn.shopify.com/s/files/1/0243/7257/files/modernizr.custom.js?743"></script>
 
   
   <script>

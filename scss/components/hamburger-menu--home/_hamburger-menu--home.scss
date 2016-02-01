@@ -1,0 +1,21 @@
+// Hamburger Menu Home
+//
+// Markup: hamburger-menu--home.html
+//
+// Styleguide: components.hamburger-menu--home
+
+@import 'components/hamburger-menu/hamburger-menu';
+@import 'components/layout-four/layout-four';
+
+.hamburger-menu--home__side, 
+%hamburger-menu--home__side {
+	@extend %hamburger-menu__side;
+	@include breakpoint($layout-four__large) {
+		display: none;
+	}
+}
+
+.content-wrapper--home,
+%content-wrapper--home {
+	overflow: hidden;
+}

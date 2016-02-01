@@ -4,35 +4,81 @@
 //
 // Styleguide: components.hamburger-menu
 
-* {
-  font-family: "Courier New", Courier, monospace;
+@import 'components/layout-four/layout-four';
+
+.hamburger-menu,
+%hamburger-menu {
+  position: fixed;
+  transform: translate3d(-200px,0,0);
+  transition: transform .5s cubic-bezier(.16, .68, .43, .99);
+  width: 18rem;
+  height: 100%;
+  top: 0;
+  clear: both;
+  overflow: auto;
+  background: white;
+
+  @include breakpoint($layout-four__large) {
+    position: absolute;
+    float: left;
+    width: 20%;
+    box-sizing: border-box;
+  }
 }
 
 .hamburger-menu--active,
- %hamburger-menu--active {
-  left: 16em;
- }
+%hamburger-menu--active {
+  display: block;
+  transform: translate3d(0,0,0);
+  transition: transform .5s cubic-bezier(.16, .68, .43, .99);
+  box-shadow: inset -10px 0 6px -9px rgba(0, 0, 0, .7);
+}
+
+.hamburger-menu__main,
+%hamburger-menu__main {
+  width: 90%;
+  margin: 0 auto;
+  @include breakpoint($layout-four__large) {
+    width: 80%;
+    float: left;
+    box-sizing: border-box;
+  }
+}
+
+.hamburger-menu__main-container,
+%hamburger-menu__main-container {
+    padding-left: 0rem;
+
+}
+
+.hamburger-menu--home__side,
+%hamburger-menu--home__side {
+
+  @include breakpoint($layout-four__large) {
+    position: absolute;
+    top: 17rem;
+    margin-left: 2rem;
+  }
+}
 
 .hamburger-menu__icon,
 %hamburger-menu__icon {
   cursor: pointer;
-  float: left;
   display: block;
   padding: 1em;
 
-  @include breakpoint(1180px) {
+  @include breakpoint($layout-four__large) {
     display: none;
   }
 }
 
 .hamburger-menu__list-outer,
 %hamburger-menu__list-outer {
-  background: white;
   list-style-type: none;
   margin: 0;
-  padding: 1rem 0 0 0;
+  padding-left: 1rem;
 
-  @include breakpoint(1180px) {
+  @include breakpoint($layout-four__large) {
     padding: 0;
   }
 }
@@ -46,15 +92,24 @@
 
 .hamburger-menu__link,
 %hamburger-menu__link {
-
+  display: block;
   cursor: pointer;
   text-decoration: none;
   color: #888888;
-  margin-bottom: .5rem;
 
   &:hover {
     color: #222222;
   }
+}
+
+.hamburger-menu__link-outer {
+  @extend %hamburger-menu__link;
+  padding: 1rem;
+}
+
+.hamburger-menu__link-inner {
+  @extend %hamburger-menu__link;
+  padding: .5rem;
 }
 
 .hamburger-menu__list--active,
@@ -62,3 +117,15 @@
   display: block;
 }
 
+.hamburger-menu__icon-container,
+%hamburger-menu__icon-container {
+  width: 100%;
+  overflow: hidden;
+  transform: translate3d(200,0,0);
+  transition: transform .5s cubic-bezier(.16, .68, .43, .99);
+}
+
+.hamburger-menu__wrapper,
+%hamburger-menu__wrapper {
+  position: relative;
+}
