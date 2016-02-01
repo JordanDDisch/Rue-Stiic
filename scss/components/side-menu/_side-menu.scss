@@ -1,0 +1,63 @@
+// Side menu
+//
+// Markup: side-menu.html
+//
+// Styleguide: components.side-menu
+
+@import 'components/hamburger-menu/hamburger-menu';
+@import 'components/layout-four/layout-four';
+
+.side-menu__main,
+%side-menu__main { 
+	display:none;	
+	@include breakpoint($layout-four__large) {
+		display: block;
+		position: static;
+		width: 20%;
+		box-sizing: border-box;
+	}
+}
+
+.side-menu__side,
+%side-menu__side {
+	
+}
+
+.side-menu__link {
+	@extend %hamburger-menu__link;
+}
+
+.side-menu__link-inner {
+	@extend %hamburger-menu__link-inner;
+}
+
+.side-menu__list-outer {
+	background: white;
+	list-style-type: none;
+	margin: 0;
+	padding-left: 1rem;
+	@include breakpoint($layout-four__large) {
+		padding: 0;
+	}
+}
+
+.side-menu__list {
+  list-style-type: none;
+  margin: 0;
+  display: none;
+}
+
+.side-menu__link-outer {
+  @extend %hamburger-menu__link;
+  padding: 1rem;
+}
+
+.side-menu__link-inner {
+  @extend %hamburger-menu__link;
+  padding: .5rem;
+}
+
+.side-menu__list--active,
+%side-menu__list--active {
+  display: block;
+}

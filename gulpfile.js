@@ -1,6 +1,6 @@
-var gulp             = require('gulp'),
-    gulpShopify      = require('gulp-shopify-upload'),
-    watch            = require('gulp-watch'),
+var gulp            =   require('gulp'),
+    watch           =   require('gulp-watch'),
+    gulpShopify     =   require('gulp-shopify-upload'),
     $                = require('gulp-load-plugins')(),
     sass             = require('gulp-sass'),
     autoprefixer     = require('gulp-autoprefixer'),
@@ -17,7 +17,7 @@ var gulp             = require('gulp'),
 gulp.task('styleguide', ['clean:styleguide'], $.shell.task([
         // kss-node [source folder of files to parse] [destination folder] --template [location of template files]
         'kss-node <%= source %> <%= destination %> --template <%= template %> --helpers <%= helpers %> ' +
-        '--css css/styles.css ' +
+        '--css assets/style.css ' +
         '--js js/jquery-2.2.0.min.js ' +
         '--js js/components.js'
     ], {
@@ -81,4 +81,9 @@ gulp.task('scripts', function() {
 gulp.task('shopify', function() {
     return watch('./+(assets|layout|config|snippets|templates|locales)/**')
         .pipe(gulpShopify('2b69a48b44c59a48f79b11ed36362f6f', 'e9ca2a5c51bcb09a58984bf572616b55', 'rue-stiic.myshopify.com', '81830017'));
+});
+
+gulp.task('deploy', ['build'], function() {  
+  return gulp.src('./+(assets|layout|config|snippets|templates|locales)/**')
+    .pipe(gulpShopify('API KEY', 'PASSWORD', 'MYSITE.myshopify.com', 'THEME ID'));
 });

@@ -1,0 +1,22 @@
+// Layout one
+//
+// Markup: layout-one.html
+//
+// Styleguide: components.layout-one
+
+.layout-one,
+%layout-one {
+	margin: 0 auto;
+	text-align: center;
+	float: none !important;
+}
+
+.layout-one__container,
+%layout-one__container {
+	margin: 0 2rem;
+	padding: 0 0.5rem;
+}
+
+.logo {
+	@extend %layout-one;
+}

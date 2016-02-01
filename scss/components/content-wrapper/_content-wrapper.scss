@@ -4,7 +4,14 @@
   max-width: 1140px;
   width: 100%;
   margin: auto;
+  transform: translate3d(0,0,0);
+  transition: transform .5s cubic-bezier(.16, .68, .43, .99);
 }
 
+.content-wrapper--active,
+%content-wrapper--active {
+  transform: translate3d(200px,0,0);
+  transition: transform .5s cubic-bezier(.16, .68, .43, .99)
+}
 
 

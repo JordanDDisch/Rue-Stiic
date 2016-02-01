@@ -1,6 +1,5 @@
 .layout-one-column,
 %layout-one-column {
-  width: 100% !important;
   max-width: 100%;
 }
 
@@ -37,12 +36,25 @@
 
 // fugly
 
+.collection-title {
+  text-align: center !important;
+}
+
 .span12, .logo {
   @extend %layout-one-column;
 }
 
 .layout-sidebar__main .span12 {
   @extend %layout-one-column__slider;
+}
+
+.logo {
+  padding-bottom: 30px;
+  padding-top: 0px !important;
+}
+
+.span12 {
+  margin: 0 0px;
 }
 
 #fp-images .span4 {

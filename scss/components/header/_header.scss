@@ -1,0 +1,51 @@
+// Header
+//
+// Markup: header.html
+//
+// Styleguide: components.header
+
+@import 'components/layout-four/layout-four';
+
+.header-centered,
+%header-centered {
+	text-align: center;
+	margin-bottom: 2.5rem;
+	width: 100%;
+}
+
+.header-nav,
+%header-nav {
+	display: none;
+    @include breakpoint($layout-four__large) {
+    	display: block;
+		padding-bottom: 2rem;
+	    width: 100%;
+    }
+}
+
+.header-nav__main,
+%header-nav__main {
+	height: 1rem;
+}
+
+.header-nav__collection,
+%header-nav__collection {
+	padding-left: 1.5%;
+}
+
+.header-nav__item,
+%header-nav__item {
+	float: left;
+	margin: 0;
+	padding-left: 0;
+	padding-right: 8.25%;
+	list-style-type: none;
+	&:last-child{
+		padding-right: 0;
+	}
+}
+
+
+
+
+

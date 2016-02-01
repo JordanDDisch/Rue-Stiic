@@ -1,37 +1,22 @@
-.layout-sidebar__wrapper,
-%layout-sidebar__wrapper {
-  width: 100%;
-  position: relative;
-
-  @include breakpoint(1180px) {
-    margin: auto;
-  }
-}
+@import 'components/layout-four/layout-four';
 
 .layout-sidebar__side,
 %layout-sidebar__side {
-  width: 14rem;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: -14rem;
-  clear: both;
-  overflow: hidden;
 
-  @include breakpoint(1180px) {
-    position: static;
+  display: none;
+
+  @include breakpoint($layout-four__large) {
+    display: block;
+    width: 18%;
     float: left;
-    width: 20%;
-    box-sizing: border-box;
   }
 }
 
 .layout-sidebar__main,
 %layout-sidebar__main {
 
-  @include breakpoint(1180px) {
-    width: 80%;
+  @include breakpoint($layout-four__large) {
+    width: 82%;
     float: left;
-    box-sizing: border-box;
   }
 }

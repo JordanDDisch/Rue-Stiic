@@ -13,7 +13,7 @@
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="public/kss.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="assets/style.css">
 
 </head>
 <body id="kss-node">
@@ -42,6 +42,92 @@
                 ><span class="kss-nav__name">Hamburger Menu</span>
               </a>
             </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-components.html#kssref-components-hamburger-menu--home">
+                <span class="kss-nav__ref ">1.2</span
+                ><span class="kss-nav__name">Hamburger Menu Home</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-components.html#kssref-components-header">
+                <span class="kss-nav__ref ">1.3</span
+                ><span class="kss-nav__name">Header</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-components.html#kssref-components-layout-four">
+                <span class="kss-nav__ref ">1.4</span
+                ><span class="kss-nav__name">Layout Four</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-components.html#kssref-components-layout-one">
+                <span class="kss-nav__ref ">1.5</span
+                ><span class="kss-nav__name">Layout one</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-components.html#kssref-components-side-menu">
+                <span class="kss-nav__ref ">1.6</span
+                ><span class="kss-nav__name">Side menu</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-components.html#kssref-components-template-shop">
+                <span class="kss-nav__ref ">1.7</span
+                ><span class="kss-nav__name">Template Shop</span>
+              </a>
+            </li>
+        </ul>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-components.html">
+          <span class="kss-nav__ref">1</span
+          ><span class="kss-nav__name">Components</span>
+        </a>
+        <ul class="kss-nav__menu-child">
+            <li class="kss-nav__menu-item">
+              <a href="section-components.html#kssref-components-hamburger-menu">
+                <span class="kss-nav__ref ">1.1</span
+                ><span class="kss-nav__name">Hamburger Menu</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-components.html#kssref-components-hamburger-menu--home">
+                <span class="kss-nav__ref ">1.2</span
+                ><span class="kss-nav__name">Hamburger Menu Home</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-components.html#kssref-components-header">
+                <span class="kss-nav__ref ">1.3</span
+                ><span class="kss-nav__name">Header</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-components.html#kssref-components-layout-four">
+                <span class="kss-nav__ref ">1.4</span
+                ><span class="kss-nav__name">Layout Four</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-components.html#kssref-components-layout-one">
+                <span class="kss-nav__ref ">1.5</span
+                ><span class="kss-nav__name">Layout one</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-components.html#kssref-components-side-menu">
+                <span class="kss-nav__ref ">1.6</span
+                ><span class="kss-nav__name">Side menu</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-components.html#kssref-components-template-shop">
+                <span class="kss-nav__ref ">1.7</span
+                ><span class="kss-nav__name">Template Shop</span>
+              </a>
+            </li>
         </ul>
       </li>
     </ul>
@@ -49,6 +135,31 @@
 </div>
 <article role="main" class="kss-main">
 
+      <div     id="kssref-components" class="kss-section kss-section--depth-1">
+
+    <div class="kss-style">
+      <h1 class="kss-title kss-title--level-1">
+        <a class="kss-title__permalink" href="#kssref-components">
+          <span class="kss-title__ref">
+              1
+            <span class="kss-title__permalink-hash">
+                #components
+            </span>
+          </span>
+          Components
+        </a>
+      </h1>
+
+
+      <div class="kss-description">
+        <p>Design components are reusable designs that can be applied using just the CSS
+class names specified in the component.</p>
+
+      </div>
+    </div>
+
+
+      </div>
       <div     id="kssref-components" class="kss-section kss-section--depth-1">
 
     <div class="kss-style">
@@ -97,105 +208,339 @@ class names specified in the component.</p>
           Example
         </div>
         <div class="kss-modifier__example">
+          <div class="hamburger-menu__icon-container">
+   <img class="hamburger-menu__icon" src="/img/hamburger_menu.svg" alt=""/>
+</div>
+<div class="hamburger-menu">
+ <ul class="hamburger-menu__list-outer">
+     <li>
+         <a class="hamburger-menu__link-outer" href="#">NEW ARRIVALS</a>
+     </li>
+     <li>
+         <a class="hamburger-menu__link-outer" href="#">SWIM</a>
+         <ul class="hamburger-menu__list">
+             <li>
+                 <a class="hamburger-menu__link-inner" href="#">• Tops</a>
+             </li>
+             <li>
+                 <a class="hamburger-menu__link-inner" href="#">• Bottoms</a>
+             </li>
+             <li>
+                 <a class="hamburger-menu__link-inner" href="#">• One Pieces</a>
+             </li>
+             <li>
+                 <a class="hamburger-menu__link-inner" href="#">• Neoprene</a>
+             </li>
+         </ul>
+     </li>
+     <li>
+         <a class="hamburger-menu__link-outer" href="#">COLLECTION</a>
+         <ul class="hamburger-menu__list">
+             <li>
+                 <a class="hamburger-menu__link-inner" href="#">• Tops</a>
+             </li>
+             <li>
+                 <a class="hamburger-menu__link-inner" href="#">• Bottoms</a>
+             </li>
+             <li>
+                 <a class="hamburger-menu__link-inner" href="#">• Dresses</a>
+             </li>
+             <li>
+                 <a class="hamburger-menu__link-inner" href="#">• Jumpsuits</a>
+             </li>
+             <li>
+                 <a class="hamburger-menu__link-inner" href="#">• Lace</a>
+             </li>
+             <li>
+                 <a class="hamburger-menu__link-inner" href="#">• Crochet</a>
+             </li>
+             <li>
+                 <a class="hamburger-menu__link-inner" href="#">• Knits</a>
+             </li>
+             <li>
+                 <a class="hamburger-menu__link-inner" href="#">• Leather</a>
+             </li>
+         </ul>
+     </li>
+     <li>
+         <a class="hamburger-menu__link-outer" href="#">STAPLES</a>
+         <ul class="hamburger-menu__list">
+             <li>
+                 <a class="hamburger-menu__link-inner" href="#">• Tops</a>
+             </li>
+             <li>
+                 <a class="hamburger-menu__link-inner" href="#">• Bottoms</a>
+             </li>
+             <li>
+                 <a class="hamburger-menu__link-inner" href="#">• Dresses</a>
+             </li>
+         </ul>
+     </li>
+     <li>
+         <a class="hamburger-menu__link-outer" href="#">SALE</a>
+         <ul class="hamburger-menu__list">
+             <li>
+                 <a class="hamburger-menu__link-inner" href="#">• Tops</a>
+             </li>
+             <li>
+                 <a class="hamburger-menu__link-inner" href="#">• Bottoms</a>
+             </li>
+             <li>
+                 <a class="hamburger-menu__link-inner" href="#">• Dresses</a>
+             </li>
+             <li>
+                 <a class="hamburger-menu__link-inner" href="#">• Staples</a>
+             </li>
+         </ul>
+     </li>
+     <li>
+         <a class="hamburger-menu__link-outer" href="#">ACCESSORIES</a>
+     </li>
+     <li>
+         <a class="hamburger-menu__link-outer" href="#">ART</a>
+     </li>
+ </ul>
+</div>
+
+
+
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;hamburger-menu__icon-container&quot;&gt;
+   &lt;img class=&quot;hamburger-menu__icon&quot; src=&quot;/img/hamburger_menu.svg&quot; alt=&quot;&quot;/&gt;
+&lt;/div&gt;
+&lt;div class=&quot;hamburger-menu&quot;&gt;
+ &lt;ul class=&quot;hamburger-menu__list-outer&quot;&gt;
+     &lt;li&gt;
+         &lt;a class=&quot;hamburger-menu__link-outer&quot; href=&quot;#&quot;&gt;NEW ARRIVALS&lt;/a&gt;
+     &lt;/li&gt;
+     &lt;li&gt;
+         &lt;a class=&quot;hamburger-menu__link-outer&quot; href=&quot;#&quot;&gt;SWIM&lt;/a&gt;
+         &lt;ul class=&quot;hamburger-menu__list&quot;&gt;
+             &lt;li&gt;
+                 &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Tops&lt;/a&gt;
+             &lt;/li&gt;
+             &lt;li&gt;
+                 &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Bottoms&lt;/a&gt;
+             &lt;/li&gt;
+             &lt;li&gt;
+                 &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• One Pieces&lt;/a&gt;
+             &lt;/li&gt;
+             &lt;li&gt;
+                 &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Neoprene&lt;/a&gt;
+             &lt;/li&gt;
+         &lt;/ul&gt;
+     &lt;/li&gt;
+     &lt;li&gt;
+         &lt;a class=&quot;hamburger-menu__link-outer&quot; href=&quot;#&quot;&gt;COLLECTION&lt;/a&gt;
+         &lt;ul class=&quot;hamburger-menu__list&quot;&gt;
+             &lt;li&gt;
+                 &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Tops&lt;/a&gt;
+             &lt;/li&gt;
+             &lt;li&gt;
+                 &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Bottoms&lt;/a&gt;
+             &lt;/li&gt;
+             &lt;li&gt;
+                 &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Dresses&lt;/a&gt;
+             &lt;/li&gt;
+             &lt;li&gt;
+                 &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Jumpsuits&lt;/a&gt;
+             &lt;/li&gt;
+             &lt;li&gt;
+                 &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Lace&lt;/a&gt;
+             &lt;/li&gt;
+             &lt;li&gt;
+                 &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Crochet&lt;/a&gt;
+             &lt;/li&gt;
+             &lt;li&gt;
+                 &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Knits&lt;/a&gt;
+             &lt;/li&gt;
+             &lt;li&gt;
+                 &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Leather&lt;/a&gt;
+             &lt;/li&gt;
+         &lt;/ul&gt;
+     &lt;/li&gt;
+     &lt;li&gt;
+         &lt;a class=&quot;hamburger-menu__link-outer&quot; href=&quot;#&quot;&gt;STAPLES&lt;/a&gt;
+         &lt;ul class=&quot;hamburger-menu__list&quot;&gt;
+             &lt;li&gt;
+                 &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Tops&lt;/a&gt;
+             &lt;/li&gt;
+             &lt;li&gt;
+                 &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Bottoms&lt;/a&gt;
+             &lt;/li&gt;
+             &lt;li&gt;
+                 &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Dresses&lt;/a&gt;
+             &lt;/li&gt;
+         &lt;/ul&gt;
+     &lt;/li&gt;
+     &lt;li&gt;
+         &lt;a class=&quot;hamburger-menu__link-outer&quot; href=&quot;#&quot;&gt;SALE&lt;/a&gt;
+         &lt;ul class=&quot;hamburger-menu__list&quot;&gt;
+             &lt;li&gt;
+                 &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Tops&lt;/a&gt;
+             &lt;/li&gt;
+             &lt;li&gt;
+                 &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Bottoms&lt;/a&gt;
+             &lt;/li&gt;
+             &lt;li&gt;
+                 &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Dresses&lt;/a&gt;
+             &lt;/li&gt;
+             &lt;li&gt;
+                 &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Staples&lt;/a&gt;
+             &lt;/li&gt;
+         &lt;/ul&gt;
+     &lt;/li&gt;
+     &lt;li&gt;
+         &lt;a class=&quot;hamburger-menu__link-outer&quot; href=&quot;#&quot;&gt;ACCESSORIES&lt;/a&gt;
+     &lt;/li&gt;
+     &lt;li&gt;
+         &lt;a class=&quot;hamburger-menu__link-outer&quot; href=&quot;#&quot;&gt;ART&lt;/a&gt;
+     &lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/div&gt;
+
+
+</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-components-hamburger-menu--home" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-components-hamburger-menu--home">
+          <span class="kss-title__ref">
+              1.2
+            <span class="kss-title__permalink-hash">
+                #components.hamburger-menu--home
+            </span>
+          </span>
+          Hamburger Menu Home
+        </a>
+      </h2>
+
+
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
           <div class="content-wrapper">
+   <div class="hamburger-menu__wrapper">
+     <div class="hamburger-menu__icon-container">
+       <img class="hamburger-menu__icon" src="/img/hamburger_menu.svg" alt=""/>
+     </div>
 
-   <div class="layout-sidebar__wrapper">
-       <img class="hamburger-menu__icon" src="/assets/hamburger_menu.svg" alt=""/>
-
-       <div class="layout-sidebar__side">
-           <ul class="hamburger-menu__list-outer">
-               <li>
-                   <a class="hamburger-menu__link-outer" href="#">NEW ARRIVALS</a>
-               </li>
-               <li>
-                   <a class="hamburger-menu__link-outer" href="#">SWIM</a>
-                   <ul class="hamburger-menu__list">
-                       <li>
-                           <a class="hamburger-menu__link-inner" href="#">• Tops</a>
-                       </li>
-                       <li>
-                           <a class="hamburger-menu__link-inner" href="#">• Bottoms</a>
-                       </li>
-                       <li>
-                           <a class="hamburger-menu__link-inner" href="#">• One Pieces</a>
-                       </li>
-                       <li>
-                           <a class="hamburger-menu__link-inner" href="#">• Neoprene</a>
-                       </li>
-                   </ul>
-               </li>
-               <li>
-                   <a class="hamburger-menu__link-outer" href="#">COLLECTION</a>
-                   <ul class="hamburger-menu__list">
-                       <li>
-                           <a class="hamburger-menu__link-inner" href="#">• Tops</a>
-                       </li>
-                       <li>
-                           <a class="hamburger-menu__link-inner" href="#">• Bottoms</a>
-                       </li>
-                       <li>
-                           <a class="hamburger-menu__link-inner" href="#">• Dresses</a>
-                       </li>
-                       <li>
-                           <a class="hamburger-menu__link-inner" href="#">• Jumpsuits</a>
-                       </li>
-                       <li>
-                           <a class="hamburger-menu__link-inner" href="#">• Lace</a>
-                       </li>
-                       <li>
-                           <a class="hamburger-menu__link-inner" href="#">• Crochet</a>
-                       </li>
-                       <li>
-                           <a class="hamburger-menu__link-inner" href="#">• Knits</a>
-                       </li>
-                       <li>
-                           <a class="hamburger-menu__link-inner" href="#">• Leather</a>
-                       </li>
-                   </ul>
-               </li>
-               <li>
-                   <a class="hamburger-menu__link-outer" href="#">STAPLES</a>
-                   <ul class="hamburger-menu__list">
-                       <li>
-                           <a class="hamburger-menu__link-inner" href="#">• Tops</a>
-                       </li>
-                       <li>
-                           <a class="hamburger-menu__link-inner" href="#">• Bottoms</a>
-                       </li>
-                       <li>
-                           <a class="hamburger-menu__link-inner" href="#">• Dresses</a>
-                       </li>
-                   </ul>
-               </li>
-               <li>
-                   <a class="hamburger-menu__link-outer" href="#">SALE</a>
-                   <ul class="hamburger-menu__list">
-                       <li>
-                           <a class="hamburger-menu__link-inner" href="#">• Tops</a>
-                       </li>
-                       <li>
-                           <a class="hamburger-menu__link-inner" href="#">• Bottoms</a>
-                       </li>
-                       <li>
-                           <a class="hamburger-menu__link-inner" href="#">• Dresses</a>
-                       </li>
-                       <li>
-                           <a class="hamburger-menu__link-inner" href="#">• Staples</a>
-                       </li>
-                   </ul>
-               </li>
-               <li>
-                   <a class="hamburger-menu__link-outer" href="#">ACCESSORIES</a>
-               </li>
-               <li>
-                   <a class="hamburger-menu__link-outer" href="#">ART</a>
-               </li>
-           </ul>
-       </div>
-
-       <div class="layout-sidebar__main" style="background: #808080; height: 1500px;">
-
-       </div>
+     <!-- header -->
+          <div class="header-centered clearfix">
+            <div class="logo">          
+              <a href="/"><img src="//cdn.shopify.com/s/files/1/0243/7257/t/5/assets/logo.png?1303396216    5253190557" alt="Rue Stiic"></a>
+            </div> 
+          </div>
+     <!-- header -->
+     
+         <div class="hamburger-menu--home__side">
+             <ul class="hamburger-menu__list-outer">
+                 <li>
+                     <a class="hamburger-menu__link-outer" href="#">NEW ARRIVALS</a>
+                 </li>
+                 <li>
+                     <a class="hamburger-menu__link-outer" href="#">SWIM</a>
+                     <ul class="hamburger-menu__list">
+                         <li>
+                             <a class="hamburger-menu__link-inner" href="#">• Tops</a>
+                         </li>
+                         <li>
+                             <a class="hamburger-menu__link-inner" href="#">• Bottoms</a>
+                         </li>
+                         <li>
+                             <a class="hamburger-menu__link-inner" href="#">• One Pieces</a>
+                         </li>
+                         <li>
+                             <a class="hamburger-menu__link-inner" href="#">• Neoprene</a>
+                         </li>
+                     </ul>
+                 </li>
+                 <li>
+                     <a class="hamburger-menu__link-outer" href="#">COLLECTION</a>
+                     <ul class="hamburger-menu__list">
+                         <li>
+                             <a class="hamburger-menu__link-inner" href="#">• Tops</a>
+                         </li>
+                         <li>
+                             <a class="hamburger-menu__link-inner" href="#">• Bottoms</a>
+                         </li>
+                         <li>
+                             <a class="hamburger-menu__link-inner" href="#">• Dresses</a>
+                         </li>
+                         <li>
+                             <a class="hamburger-menu__link-inner" href="#">• Jumpsuits</a>
+                         </li>
+                         <li>
+                             <a class="hamburger-menu__link-inner" href="#">• Lace</a>
+                         </li>
+                         <li>
+                             <a class="hamburger-menu__link-inner" href="#">• Crochet</a>
+                         </li>
+                         <li>
+                             <a class="hamburger-menu__link-inner" href="#">• Knits</a>
+                         </li>
+                         <li>
+                             <a class="hamburger-menu__link-inner" href="#">• Leather</a>
+                         </li>
+                     </ul>
+                 </li>
+                 <li>
+                     <a class="hamburger-menu__link-outer" href="#">STAPLES</a>
+                     <ul class="hamburger-menu__list">
+                         <li>
+                             <a class="hamburger-menu__link-inner" href="#">• Tops</a>
+                         </li>
+                         <li>
+                             <a class="hamburger-menu__link-inner" href="#">• Bottoms</a>
+                         </li>
+                         <li>
+                             <a class="hamburger-menu__link-inner" href="#">• Dresses</a>
+                         </li>
+                     </ul>
+                 </li>
+                 <li>
+                     <a class="hamburger-menu__link-outer" href="#">SALE</a>
+                     <ul class="hamburger-menu__list">
+                         <li>
+                             <a class="hamburger-menu__link-inner" href="#">• Tops</a>
+                         </li>
+                         <li>
+                             <a class="hamburger-menu__link-inner" href="#">• Bottoms</a>
+                         </li>
+                         <li>
+                             <a class="hamburger-menu__link-inner" href="#">• Dresses</a>
+                         </li>
+                         <li>
+                             <a class="hamburger-menu__link-inner" href="#">• Staples</a>
+                         </li>
+                     </ul>
+                 </li>
+                 <li>
+                     <a class="hamburger-menu__link-outer" href="#">ACCESSORIES</a>
+                 </li>
+                 <li>
+                     <a class="hamburger-menu__link-outer" href="#">ART</a>
+                 </li>
+             </ul>
+         </div>
+         
+        <div class="hamberger-menu__main">
+            <div class='layout-one__container'>
+            	<div class='layout-one'>
+            		<img src="http://fillmurray.com/966/644" alt="">
+            	</div>	
+            </div>        </div>
    </div>
 </div>
 
@@ -204,107 +549,1079 @@ class names specified in the component.</p>
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;content-wrapper&quot;&gt;
+   &lt;div class=&quot;hamburger-menu__wrapper&quot;&gt;
+     &lt;div class=&quot;hamburger-menu__icon-container&quot;&gt;
+       &lt;img class=&quot;hamburger-menu__icon&quot; src=&quot;/img/hamburger_menu.svg&quot; alt=&quot;&quot;/&gt;
+     &lt;/div&gt;
 
-   &lt;div class=&quot;layout-sidebar__wrapper&quot;&gt;
-       &lt;img class=&quot;hamburger-menu__icon&quot; src=&quot;/assets/hamburger_menu.svg&quot; alt=&quot;&quot;/&gt;
-
-       &lt;div class=&quot;layout-sidebar__side&quot;&gt;
-           &lt;ul class=&quot;hamburger-menu__list-outer&quot;&gt;
-               &lt;li&gt;
-                   &lt;a class=&quot;hamburger-menu__link-outer&quot; href=&quot;#&quot;&gt;NEW ARRIVALS&lt;/a&gt;
-               &lt;/li&gt;
-               &lt;li&gt;
-                   &lt;a class=&quot;hamburger-menu__link-outer&quot; href=&quot;#&quot;&gt;SWIM&lt;/a&gt;
-                   &lt;ul class=&quot;hamburger-menu__list&quot;&gt;
-                       &lt;li&gt;
-                           &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Tops&lt;/a&gt;
-                       &lt;/li&gt;
-                       &lt;li&gt;
-                           &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Bottoms&lt;/a&gt;
-                       &lt;/li&gt;
-                       &lt;li&gt;
-                           &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• One Pieces&lt;/a&gt;
-                       &lt;/li&gt;
-                       &lt;li&gt;
-                           &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Neoprene&lt;/a&gt;
-                       &lt;/li&gt;
-                   &lt;/ul&gt;
-               &lt;/li&gt;
-               &lt;li&gt;
-                   &lt;a class=&quot;hamburger-menu__link-outer&quot; href=&quot;#&quot;&gt;COLLECTION&lt;/a&gt;
-                   &lt;ul class=&quot;hamburger-menu__list&quot;&gt;
-                       &lt;li&gt;
-                           &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Tops&lt;/a&gt;
-                       &lt;/li&gt;
-                       &lt;li&gt;
-                           &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Bottoms&lt;/a&gt;
-                       &lt;/li&gt;
-                       &lt;li&gt;
-                           &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Dresses&lt;/a&gt;
-                       &lt;/li&gt;
-                       &lt;li&gt;
-                           &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Jumpsuits&lt;/a&gt;
-                       &lt;/li&gt;
-                       &lt;li&gt;
-                           &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Lace&lt;/a&gt;
-                       &lt;/li&gt;
-                       &lt;li&gt;
-                           &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Crochet&lt;/a&gt;
-                       &lt;/li&gt;
-                       &lt;li&gt;
-                           &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Knits&lt;/a&gt;
-                       &lt;/li&gt;
-                       &lt;li&gt;
-                           &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Leather&lt;/a&gt;
-                       &lt;/li&gt;
-                   &lt;/ul&gt;
-               &lt;/li&gt;
-               &lt;li&gt;
-                   &lt;a class=&quot;hamburger-menu__link-outer&quot; href=&quot;#&quot;&gt;STAPLES&lt;/a&gt;
-                   &lt;ul class=&quot;hamburger-menu__list&quot;&gt;
-                       &lt;li&gt;
-                           &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Tops&lt;/a&gt;
-                       &lt;/li&gt;
-                       &lt;li&gt;
-                           &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Bottoms&lt;/a&gt;
-                       &lt;/li&gt;
-                       &lt;li&gt;
-                           &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Dresses&lt;/a&gt;
-                       &lt;/li&gt;
-                   &lt;/ul&gt;
-               &lt;/li&gt;
-               &lt;li&gt;
-                   &lt;a class=&quot;hamburger-menu__link-outer&quot; href=&quot;#&quot;&gt;SALE&lt;/a&gt;
-                   &lt;ul class=&quot;hamburger-menu__list&quot;&gt;
-                       &lt;li&gt;
-                           &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Tops&lt;/a&gt;
-                       &lt;/li&gt;
-                       &lt;li&gt;
-                           &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Bottoms&lt;/a&gt;
-                       &lt;/li&gt;
-                       &lt;li&gt;
-                           &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Dresses&lt;/a&gt;
-                       &lt;/li&gt;
-                       &lt;li&gt;
-                           &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Staples&lt;/a&gt;
-                       &lt;/li&gt;
-                   &lt;/ul&gt;
-               &lt;/li&gt;
-               &lt;li&gt;
-                   &lt;a class=&quot;hamburger-menu__link-outer&quot; href=&quot;#&quot;&gt;ACCESSORIES&lt;/a&gt;
-               &lt;/li&gt;
-               &lt;li&gt;
-                   &lt;a class=&quot;hamburger-menu__link-outer&quot; href=&quot;#&quot;&gt;ART&lt;/a&gt;
-               &lt;/li&gt;
-           &lt;/ul&gt;
-       &lt;/div&gt;
-
-       &lt;div class=&quot;layout-sidebar__main&quot; style=&quot;background: #808080; height: 1500px;&quot;&gt;
-
-       &lt;/div&gt;
+     &lt;!-- header --&gt;
+          &lt;div class=&quot;header-centered clearfix&quot;&gt;
+            &lt;div class=&quot;logo&quot;&gt;          
+              &lt;a href=&quot;/&quot;&gt;&lt;img src=&quot;//cdn.shopify.com/s/files/1/0243/7257/t/5/assets/logo.png?1303396216    5253190557&quot; alt=&quot;Rue Stiic&quot;&gt;&lt;/a&gt;
+            &lt;/div&gt; 
+          &lt;/div&gt;
+     &lt;!-- header --&gt;
+     
+         &lt;div class=&quot;hamburger-menu--home__side&quot;&gt;
+             &lt;ul class=&quot;hamburger-menu__list-outer&quot;&gt;
+                 &lt;li&gt;
+                     &lt;a class=&quot;hamburger-menu__link-outer&quot; href=&quot;#&quot;&gt;NEW ARRIVALS&lt;/a&gt;
+                 &lt;/li&gt;
+                 &lt;li&gt;
+                     &lt;a class=&quot;hamburger-menu__link-outer&quot; href=&quot;#&quot;&gt;SWIM&lt;/a&gt;
+                     &lt;ul class=&quot;hamburger-menu__list&quot;&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Tops&lt;/a&gt;
+                         &lt;/li&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Bottoms&lt;/a&gt;
+                         &lt;/li&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• One Pieces&lt;/a&gt;
+                         &lt;/li&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Neoprene&lt;/a&gt;
+                         &lt;/li&gt;
+                     &lt;/ul&gt;
+                 &lt;/li&gt;
+                 &lt;li&gt;
+                     &lt;a class=&quot;hamburger-menu__link-outer&quot; href=&quot;#&quot;&gt;COLLECTION&lt;/a&gt;
+                     &lt;ul class=&quot;hamburger-menu__list&quot;&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Tops&lt;/a&gt;
+                         &lt;/li&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Bottoms&lt;/a&gt;
+                         &lt;/li&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Dresses&lt;/a&gt;
+                         &lt;/li&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Jumpsuits&lt;/a&gt;
+                         &lt;/li&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Lace&lt;/a&gt;
+                         &lt;/li&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Crochet&lt;/a&gt;
+                         &lt;/li&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Knits&lt;/a&gt;
+                         &lt;/li&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Leather&lt;/a&gt;
+                         &lt;/li&gt;
+                     &lt;/ul&gt;
+                 &lt;/li&gt;
+                 &lt;li&gt;
+                     &lt;a class=&quot;hamburger-menu__link-outer&quot; href=&quot;#&quot;&gt;STAPLES&lt;/a&gt;
+                     &lt;ul class=&quot;hamburger-menu__list&quot;&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Tops&lt;/a&gt;
+                         &lt;/li&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Bottoms&lt;/a&gt;
+                         &lt;/li&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Dresses&lt;/a&gt;
+                         &lt;/li&gt;
+                     &lt;/ul&gt;
+                 &lt;/li&gt;
+                 &lt;li&gt;
+                     &lt;a class=&quot;hamburger-menu__link-outer&quot; href=&quot;#&quot;&gt;SALE&lt;/a&gt;
+                     &lt;ul class=&quot;hamburger-menu__list&quot;&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Tops&lt;/a&gt;
+                         &lt;/li&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Bottoms&lt;/a&gt;
+                         &lt;/li&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Dresses&lt;/a&gt;
+                         &lt;/li&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Staples&lt;/a&gt;
+                         &lt;/li&gt;
+                     &lt;/ul&gt;
+                 &lt;/li&gt;
+                 &lt;li&gt;
+                     &lt;a class=&quot;hamburger-menu__link-outer&quot; href=&quot;#&quot;&gt;ACCESSORIES&lt;/a&gt;
+                 &lt;/li&gt;
+                 &lt;li&gt;
+                     &lt;a class=&quot;hamburger-menu__link-outer&quot; href=&quot;#&quot;&gt;ART&lt;/a&gt;
+                 &lt;/li&gt;
+             &lt;/ul&gt;
+         &lt;/div&gt;
+         
+        &lt;div class=&quot;hamberger-menu__main&quot;&gt;
+            &lt;div class=&#x27;layout-one__container&#x27;&gt;
+            	&lt;div class=&#x27;layout-one&#x27;&gt;
+            		&lt;img src=&quot;http://fillmurray.com/966/644&quot; alt=&quot;&quot;&gt;
+            	&lt;/div&gt;	
+            &lt;/div&gt;        &lt;/div&gt;
    &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-components-header" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-components-header">
+          <span class="kss-title__ref">
+              1.3
+            <span class="kss-title__permalink-hash">
+                #components.header
+            </span>
+          </span>
+          Header
+        </a>
+      </h2>
+
+
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <div class="header-centered clearfix">
+        <div class="logo">          
+          <a href="/"><img src="//cdn.shopify.com/s/files/1/0243/7257/t/5/assets/logo.png?1303396216	5253190557" alt="Rue Stiic"></a>
+        </div> 
+</div>
+
+<section class='header-nav'>
+	<nav class='header-nav__main'>
+		<ul class="header-nav__collection">
+			<li class="header-nav__item">
+				<a href="#">Lorem.</a>
+			</li>
+			<li class="header-nav__item">
+				<a href="#">Quia.</a>
+			</li>
+			<li class="header-nav__item">
+				<a href="#">Quos.</a>
+			</li>
+			<li class="header-nav__item">
+				<a href="#">Saepe.</a>
+			</li>
+			<li class="header-nav__item">
+				<a href="#">Reprehenderit.</a>
+			</li>
+			<li class="header-nav__item">
+				<a href="#">Illo.</a>
+			</li>
+			<li class="header-nav__item">
+				<a href="">Lorem.</a>
+			</li>
+		</ul>
+	</nav>
+</section>
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;header-centered clearfix&quot;&gt;
+        &lt;div class=&quot;logo&quot;&gt;          
+          &lt;a href=&quot;/&quot;&gt;&lt;img src=&quot;//cdn.shopify.com/s/files/1/0243/7257/t/5/assets/logo.png?1303396216	5253190557&quot; alt=&quot;Rue Stiic&quot;&gt;&lt;/a&gt;
+        &lt;/div&gt; 
+&lt;/div&gt;
+
+&lt;section class=&#x27;header-nav&#x27;&gt;
+	&lt;nav class=&#x27;header-nav__main&#x27;&gt;
+		&lt;ul class=&quot;header-nav__collection&quot;&gt;
+			&lt;li class=&quot;header-nav__item&quot;&gt;
+				&lt;a href=&quot;#&quot;&gt;Lorem.&lt;/a&gt;
+			&lt;/li&gt;
+			&lt;li class=&quot;header-nav__item&quot;&gt;
+				&lt;a href=&quot;#&quot;&gt;Quia.&lt;/a&gt;
+			&lt;/li&gt;
+			&lt;li class=&quot;header-nav__item&quot;&gt;
+				&lt;a href=&quot;#&quot;&gt;Quos.&lt;/a&gt;
+			&lt;/li&gt;
+			&lt;li class=&quot;header-nav__item&quot;&gt;
+				&lt;a href=&quot;#&quot;&gt;Saepe.&lt;/a&gt;
+			&lt;/li&gt;
+			&lt;li class=&quot;header-nav__item&quot;&gt;
+				&lt;a href=&quot;#&quot;&gt;Reprehenderit.&lt;/a&gt;
+			&lt;/li&gt;
+			&lt;li class=&quot;header-nav__item&quot;&gt;
+				&lt;a href=&quot;#&quot;&gt;Illo.&lt;/a&gt;
+			&lt;/li&gt;
+			&lt;li class=&quot;header-nav__item&quot;&gt;
+				&lt;a href=&quot;&quot;&gt;Lorem.&lt;/a&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/nav&gt;
+&lt;/section&gt;</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-components-layout-four" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-components-layout-four">
+          <span class="kss-title__ref">
+              1.4
+            <span class="kss-title__permalink-hash">
+                #components.layout-four
+            </span>
+          </span>
+          Layout Four
+        </a>
+      </h2>
+
+
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <div class="layout-four">
+	<div class="layout-four__item">
+		<img src="http://fillmurray.com/320/480" alt="blah">
+		<div class="layout-four__description-container">
+			<header>Exclusive</header>
+			<p>Fill murrays jacket</p>
+			<span>$256.65</span>
+		</div>
+	</div>
+	<div class="layout-four__item">
+		<img src="http://fillmurray.com/320/480" alt="blah">
+		<div class="layout-four__description-container">
+			<header>Exclusive</header>
+			<p>Fill murrays jacket</p>
+			<span>$256.65</span>
+		</div>
+	</div>
+	<div class="layout-four__item">
+		<img src="http://fillmurray.com/320/480" alt="blah">
+		<div class="layout-four__description-container">
+			<header>Exclusive</header>
+			<p>Fill murrays jacket</p>
+			<span>$256.65</span>
+		</div>
+	</div>
+	<div class="layout-four__item">
+		<img src="http://fillmurray.com/320/480" alt="blah">
+		<div class="layout-four__description-container">
+			<header>Exclusive</header>
+			<p>Fill murrays jacket</p>
+			<span>$256.65</span>
+		</div>
+	</div>
+	<div class="layout-four__item">
+		<img src="http://fillmurray.com/320/480" alt="blah">
+		<div class="layout-four__description-container">
+			<header>Exclusive</header>
+			<p>Fill murrays jacket</p>
+			<span>$256.65</span>
+		</div>
+	</div>
+	<div class="layout-four__item">
+		<img src="http://fillmurray.com/320/480" alt="blah">
+		<div class="layout-four__description-container">
+			<header>Exclusive</header>
+			<p>Fill murrays jacket</p>
+			<span>$256.65</span>
+		</div>
+	</div>
+	<div class="layout-four__item">
+		<img src="http://fillmurray.com/320/480" alt="blah">
+		<div class="layout-four__description-container">
+			<header>Exclusive</header>
+			<p>Fill murrays jacket</p>
+			<span>$256.65</span>
+		</div>
+	</div>
+	<div class="layout-four__item">
+		<img src="http://fillmurray.com/320/480" alt="blah">
+		<div class="layout-four__description-container">
+			<header>Exclusive</header>
+			<p>Fill murrays jacket</p>
+			<span>$256.65</span>
+		</div>
+	</div>
+</div>
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;layout-four&quot;&gt;
+	&lt;div class=&quot;layout-four__item&quot;&gt;
+		&lt;img src=&quot;http://fillmurray.com/320/480&quot; alt=&quot;blah&quot;&gt;
+		&lt;div class=&quot;layout-four__description-container&quot;&gt;
+			&lt;header&gt;Exclusive&lt;/header&gt;
+			&lt;p&gt;Fill murrays jacket&lt;/p&gt;
+			&lt;span&gt;$256.65&lt;/span&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;layout-four__item&quot;&gt;
+		&lt;img src=&quot;http://fillmurray.com/320/480&quot; alt=&quot;blah&quot;&gt;
+		&lt;div class=&quot;layout-four__description-container&quot;&gt;
+			&lt;header&gt;Exclusive&lt;/header&gt;
+			&lt;p&gt;Fill murrays jacket&lt;/p&gt;
+			&lt;span&gt;$256.65&lt;/span&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;layout-four__item&quot;&gt;
+		&lt;img src=&quot;http://fillmurray.com/320/480&quot; alt=&quot;blah&quot;&gt;
+		&lt;div class=&quot;layout-four__description-container&quot;&gt;
+			&lt;header&gt;Exclusive&lt;/header&gt;
+			&lt;p&gt;Fill murrays jacket&lt;/p&gt;
+			&lt;span&gt;$256.65&lt;/span&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;layout-four__item&quot;&gt;
+		&lt;img src=&quot;http://fillmurray.com/320/480&quot; alt=&quot;blah&quot;&gt;
+		&lt;div class=&quot;layout-four__description-container&quot;&gt;
+			&lt;header&gt;Exclusive&lt;/header&gt;
+			&lt;p&gt;Fill murrays jacket&lt;/p&gt;
+			&lt;span&gt;$256.65&lt;/span&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;layout-four__item&quot;&gt;
+		&lt;img src=&quot;http://fillmurray.com/320/480&quot; alt=&quot;blah&quot;&gt;
+		&lt;div class=&quot;layout-four__description-container&quot;&gt;
+			&lt;header&gt;Exclusive&lt;/header&gt;
+			&lt;p&gt;Fill murrays jacket&lt;/p&gt;
+			&lt;span&gt;$256.65&lt;/span&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;layout-four__item&quot;&gt;
+		&lt;img src=&quot;http://fillmurray.com/320/480&quot; alt=&quot;blah&quot;&gt;
+		&lt;div class=&quot;layout-four__description-container&quot;&gt;
+			&lt;header&gt;Exclusive&lt;/header&gt;
+			&lt;p&gt;Fill murrays jacket&lt;/p&gt;
+			&lt;span&gt;$256.65&lt;/span&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;layout-four__item&quot;&gt;
+		&lt;img src=&quot;http://fillmurray.com/320/480&quot; alt=&quot;blah&quot;&gt;
+		&lt;div class=&quot;layout-four__description-container&quot;&gt;
+			&lt;header&gt;Exclusive&lt;/header&gt;
+			&lt;p&gt;Fill murrays jacket&lt;/p&gt;
+			&lt;span&gt;$256.65&lt;/span&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;layout-four__item&quot;&gt;
+		&lt;img src=&quot;http://fillmurray.com/320/480&quot; alt=&quot;blah&quot;&gt;
+		&lt;div class=&quot;layout-four__description-container&quot;&gt;
+			&lt;header&gt;Exclusive&lt;/header&gt;
+			&lt;p&gt;Fill murrays jacket&lt;/p&gt;
+			&lt;span&gt;$256.65&lt;/span&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-components-layout-one" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-components-layout-one">
+          <span class="kss-title__ref">
+              1.5
+            <span class="kss-title__permalink-hash">
+                #components.layout-one
+            </span>
+          </span>
+          Layout one
+        </a>
+      </h2>
+
+
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <div class='layout-one__container'>
+	<div class='layout-one'>
+		<img src="http://fillmurray.com/966/644" alt="">
+	</div>	
+</div>
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&#x27;layout-one__container&#x27;&gt;
+	&lt;div class=&#x27;layout-one&#x27;&gt;
+		&lt;img src=&quot;http://fillmurray.com/966/644&quot; alt=&quot;&quot;&gt;
+	&lt;/div&gt;	
+&lt;/div&gt;</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-components-side-menu" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-components-side-menu">
+          <span class="kss-title__ref">
+              1.6
+            <span class="kss-title__permalink-hash">
+                #components.side-menu
+            </span>
+          </span>
+          Side menu
+        </a>
+      </h2>
+
+
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <div class='side-menu__wrapper'>
+		<div class="side-menu__main">
+             <ul class="side-menu__list-outer">
+                 <li>
+                     <a class="side-menu__link-outer" href="#">NEW ARRIVALS</a>
+                 </li>
+                 <li>
+                     <a class="side-menu__link-outer" href="#">SWIM</a>
+                     <ul class="side-menu__list">
+                         <li>
+                             <a class="side-menu__link-inner" href="#">• Tops</a>
+                         </li>
+                         <li>
+                             <a class="side-menu__link-inner" href="#">• Bottoms</a>
+                         </li>
+                         <li>
+                             <a class="side-menu__link-inner" href="#">• One Pieces</a>
+                         </li>
+                         <li>
+                             <a class="side-menu__link-inner" href="#">• Neoprene</a>
+                         </li>
+                     </ul>
+                 </li>
+                 <li>
+                     <a class="side-menu__link-outer" href="#">COLLECTION</a>
+                     <ul class="side-menu__list">
+                         <li>
+                             <a class="side-menu__link-inner" href="#">• Tops</a>
+                         </li>
+                         <li>
+                             <a class="side-menu__link-inner" href="#">• Bottoms</a>
+                         </li>
+                         <li>
+                             <a class="side-menu__link-inner" href="#">• Dresses</a>
+                         </li>
+                         <li>
+                             <a class="side-menu__link-inner" href="#">• Jumpsuits</a>
+                         </li>
+                         <li>
+                             <a class="side-menu__link-inner" href="#">• Lace</a>
+                         </li>
+                         <li>
+                             <a class="side-menu__link-inner" href="#">• Crochet</a>
+                         </li>
+                         <li>
+                             <a class="side-menu__link-inner" href="#">• Knits</a>
+                         </li>
+                         <li>
+                             <a class="side-menu__link-inner" href="#">• Leather</a>
+                         </li>
+                     </ul>
+                 </li>
+                 <li>
+                     <a class="side-menu__link-outer" href="#">STAPLES</a>
+                     <ul class="side-menu__list">
+                         <li>
+                             <a class="side-menu__link-inner" href="#">• Tops</a>
+                         </li>
+                         <li>
+                             <a class="side-menu__link-inner" href="#">• Bottoms</a>
+                         </li>
+                         <li>
+                             <a class="side-menu__link-inner" href="#">• Dresses</a>
+                         </li>
+                     </ul>
+                 </li>
+                 <li>
+                     <a class="side-menu__link-outer" href="#">SALE</a>
+                     <ul class="side-menu__list">
+                         <li>
+                             <a class="side-menu__link-inner" href="#">• Tops</a>
+                         </li>
+                         <li>
+                             <a class="side-menu__link-inner" href="#">• Bottoms</a>
+                         </li>
+                         <li>
+                             <a class="side-menu__link-inner" href="#">• Dresses</a>
+                         </li>
+                         <li>
+                             <a class="side-menu__link-inner" href="#">• Staples</a>
+                         </li>
+                     </ul>
+                 </li>
+                 <li>
+                     <a class="side-menu__link-outer" href="#">ACCESSORIES</a>
+                 </li>
+                 <li>
+                     <a class="side-menu__link-outer" href="#">ART</a>
+                 </li>
+             </ul>
+     </div>
+</div>
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&#x27;side-menu__wrapper&#x27;&gt;
+		&lt;div class=&quot;side-menu__main&quot;&gt;
+             &lt;ul class=&quot;side-menu__list-outer&quot;&gt;
+                 &lt;li&gt;
+                     &lt;a class=&quot;side-menu__link-outer&quot; href=&quot;#&quot;&gt;NEW ARRIVALS&lt;/a&gt;
+                 &lt;/li&gt;
+                 &lt;li&gt;
+                     &lt;a class=&quot;side-menu__link-outer&quot; href=&quot;#&quot;&gt;SWIM&lt;/a&gt;
+                     &lt;ul class=&quot;side-menu__list&quot;&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;side-menu__link-inner&quot; href=&quot;#&quot;&gt;• Tops&lt;/a&gt;
+                         &lt;/li&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;side-menu__link-inner&quot; href=&quot;#&quot;&gt;• Bottoms&lt;/a&gt;
+                         &lt;/li&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;side-menu__link-inner&quot; href=&quot;#&quot;&gt;• One Pieces&lt;/a&gt;
+                         &lt;/li&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;side-menu__link-inner&quot; href=&quot;#&quot;&gt;• Neoprene&lt;/a&gt;
+                         &lt;/li&gt;
+                     &lt;/ul&gt;
+                 &lt;/li&gt;
+                 &lt;li&gt;
+                     &lt;a class=&quot;side-menu__link-outer&quot; href=&quot;#&quot;&gt;COLLECTION&lt;/a&gt;
+                     &lt;ul class=&quot;side-menu__list&quot;&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;side-menu__link-inner&quot; href=&quot;#&quot;&gt;• Tops&lt;/a&gt;
+                         &lt;/li&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;side-menu__link-inner&quot; href=&quot;#&quot;&gt;• Bottoms&lt;/a&gt;
+                         &lt;/li&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;side-menu__link-inner&quot; href=&quot;#&quot;&gt;• Dresses&lt;/a&gt;
+                         &lt;/li&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;side-menu__link-inner&quot; href=&quot;#&quot;&gt;• Jumpsuits&lt;/a&gt;
+                         &lt;/li&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;side-menu__link-inner&quot; href=&quot;#&quot;&gt;• Lace&lt;/a&gt;
+                         &lt;/li&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;side-menu__link-inner&quot; href=&quot;#&quot;&gt;• Crochet&lt;/a&gt;
+                         &lt;/li&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;side-menu__link-inner&quot; href=&quot;#&quot;&gt;• Knits&lt;/a&gt;
+                         &lt;/li&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;side-menu__link-inner&quot; href=&quot;#&quot;&gt;• Leather&lt;/a&gt;
+                         &lt;/li&gt;
+                     &lt;/ul&gt;
+                 &lt;/li&gt;
+                 &lt;li&gt;
+                     &lt;a class=&quot;side-menu__link-outer&quot; href=&quot;#&quot;&gt;STAPLES&lt;/a&gt;
+                     &lt;ul class=&quot;side-menu__list&quot;&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;side-menu__link-inner&quot; href=&quot;#&quot;&gt;• Tops&lt;/a&gt;
+                         &lt;/li&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;side-menu__link-inner&quot; href=&quot;#&quot;&gt;• Bottoms&lt;/a&gt;
+                         &lt;/li&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;side-menu__link-inner&quot; href=&quot;#&quot;&gt;• Dresses&lt;/a&gt;
+                         &lt;/li&gt;
+                     &lt;/ul&gt;
+                 &lt;/li&gt;
+                 &lt;li&gt;
+                     &lt;a class=&quot;side-menu__link-outer&quot; href=&quot;#&quot;&gt;SALE&lt;/a&gt;
+                     &lt;ul class=&quot;side-menu__list&quot;&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;side-menu__link-inner&quot; href=&quot;#&quot;&gt;• Tops&lt;/a&gt;
+                         &lt;/li&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;side-menu__link-inner&quot; href=&quot;#&quot;&gt;• Bottoms&lt;/a&gt;
+                         &lt;/li&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;side-menu__link-inner&quot; href=&quot;#&quot;&gt;• Dresses&lt;/a&gt;
+                         &lt;/li&gt;
+                         &lt;li&gt;
+                             &lt;a class=&quot;side-menu__link-inner&quot; href=&quot;#&quot;&gt;• Staples&lt;/a&gt;
+                         &lt;/li&gt;
+                     &lt;/ul&gt;
+                 &lt;/li&gt;
+                 &lt;li&gt;
+                     &lt;a class=&quot;side-menu__link-outer&quot; href=&quot;#&quot;&gt;ACCESSORIES&lt;/a&gt;
+                 &lt;/li&gt;
+                 &lt;li&gt;
+                     &lt;a class=&quot;side-menu__link-outer&quot; href=&quot;#&quot;&gt;ART&lt;/a&gt;
+                 &lt;/li&gt;
+             &lt;/ul&gt;
+     &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-components-template-shop" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-components-template-shop">
+          <span class="kss-title__ref">
+              1.7
+            <span class="kss-title__permalink-hash">
+                #components.template-shop
+            </span>
+          </span>
+          Template Shop
+        </a>
+      </h2>
+
+
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <div style="overflow: hidden;">
+    <div class="hamburger-menu__icon-container">
+       <img class="hamburger-menu__icon" src="/img/hamburger_menu.svg" alt=""/>
+    </div>
+    <div class="hamburger-menu">
+     <ul class="hamburger-menu__list-outer">
+         <li>
+             <a class="hamburger-menu__link-outer" href="#">NEW ARRIVALS</a>
+         </li>
+         <li>
+             <a class="hamburger-menu__link-outer" href="#">SWIM</a>
+             <ul class="hamburger-menu__list">
+                 <li>
+                     <a class="hamburger-menu__link-inner" href="#">• Tops</a>
+                 </li>
+                 <li>
+                     <a class="hamburger-menu__link-inner" href="#">• Bottoms</a>
+                 </li>
+                 <li>
+                     <a class="hamburger-menu__link-inner" href="#">• One Pieces</a>
+                 </li>
+                 <li>
+                     <a class="hamburger-menu__link-inner" href="#">• Neoprene</a>
+                 </li>
+             </ul>
+         </li>
+         <li>
+             <a class="hamburger-menu__link-outer" href="#">COLLECTION</a>
+             <ul class="hamburger-menu__list">
+                 <li>
+                     <a class="hamburger-menu__link-inner" href="#">• Tops</a>
+                 </li>
+                 <li>
+                     <a class="hamburger-menu__link-inner" href="#">• Bottoms</a>
+                 </li>
+                 <li>
+                     <a class="hamburger-menu__link-inner" href="#">• Dresses</a>
+                 </li>
+                 <li>
+                     <a class="hamburger-menu__link-inner" href="#">• Jumpsuits</a>
+                 </li>
+                 <li>
+                     <a class="hamburger-menu__link-inner" href="#">• Lace</a>
+                 </li>
+                 <li>
+                     <a class="hamburger-menu__link-inner" href="#">• Crochet</a>
+                 </li>
+                 <li>
+                     <a class="hamburger-menu__link-inner" href="#">• Knits</a>
+                 </li>
+                 <li>
+                     <a class="hamburger-menu__link-inner" href="#">• Leather</a>
+                 </li>
+             </ul>
+         </li>
+         <li>
+             <a class="hamburger-menu__link-outer" href="#">STAPLES</a>
+             <ul class="hamburger-menu__list">
+                 <li>
+                     <a class="hamburger-menu__link-inner" href="#">• Tops</a>
+                 </li>
+                 <li>
+                     <a class="hamburger-menu__link-inner" href="#">• Bottoms</a>
+                 </li>
+                 <li>
+                     <a class="hamburger-menu__link-inner" href="#">• Dresses</a>
+                 </li>
+             </ul>
+         </li>
+         <li>
+             <a class="hamburger-menu__link-outer" href="#">SALE</a>
+             <ul class="hamburger-menu__list">
+                 <li>
+                     <a class="hamburger-menu__link-inner" href="#">• Tops</a>
+                 </li>
+                 <li>
+                     <a class="hamburger-menu__link-inner" href="#">• Bottoms</a>
+                 </li>
+                 <li>
+                     <a class="hamburger-menu__link-inner" href="#">• Dresses</a>
+                 </li>
+                 <li>
+                     <a class="hamburger-menu__link-inner" href="#">• Staples</a>
+                 </li>
+             </ul>
+         </li>
+         <li>
+             <a class="hamburger-menu__link-outer" href="#">ACCESSORIES</a>
+         </li>
+         <li>
+             <a class="hamburger-menu__link-outer" href="#">ART</a>
+         </li>
+     </ul>
+    </div>
+    
+    
+    <div class="content-wrapper">
+    <div class="header-centered clearfix">
+            <div class="logo">          
+              <a href="/"><img src="//cdn.shopify.com/s/files/1/0243/7257/t/5/assets/logo.png?1303396216	5253190557" alt="Rue Stiic"></a>
+            </div> 
+    </div>
+    
+    <section class='header-nav'>
+    	<nav class='header-nav__main'>
+    		<ul class="header-nav__collection">
+    			<li class="header-nav__item">
+    				<a href="#">Lorem.</a>
+    			</li>
+    			<li class="header-nav__item">
+    				<a href="#">Quia.</a>
+    			</li>
+    			<li class="header-nav__item">
+    				<a href="#">Quos.</a>
+    			</li>
+    			<li class="header-nav__item">
+    				<a href="#">Saepe.</a>
+    			</li>
+    			<li class="header-nav__item">
+    				<a href="#">Reprehenderit.</a>
+    			</li>
+    			<li class="header-nav__item">
+    				<a href="#">Illo.</a>
+    			</li>
+    			<li class="header-nav__item">
+    				<a href="">Lorem.</a>
+    			</li>
+    		</ul>
+    	</nav>
+    </section>
+        <div class="layout-sidebar__side">
+            <ul>
+                <li>asdf</li>
+                <li>asdf</li>
+                <li>asdf</li>
+                <li>asdf</li>
+                <li>asdf</li>
+            </ul>
+        </div>
+        <div class="layout-sidebar__main">
+            <div class="layout-four">
+            	<div class="layout-four__item">
+            		<img src="http://fillmurray.com/320/480" alt="blah">
+            		<div class="layout-four__description-container">
+            			<header>Exclusive</header>
+            			<p>Fill murrays jacket</p>
+            			<span>$256.65</span>
+            		</div>
+            	</div>
+            	<div class="layout-four__item">
+            		<img src="http://fillmurray.com/320/480" alt="blah">
+            		<div class="layout-four__description-container">
+            			<header>Exclusive</header>
+            			<p>Fill murrays jacket</p>
+            			<span>$256.65</span>
+            		</div>
+            	</div>
+            	<div class="layout-four__item">
+            		<img src="http://fillmurray.com/320/480" alt="blah">
+            		<div class="layout-four__description-container">
+            			<header>Exclusive</header>
+            			<p>Fill murrays jacket</p>
+            			<span>$256.65</span>
+            		</div>
+            	</div>
+            	<div class="layout-four__item">
+            		<img src="http://fillmurray.com/320/480" alt="blah">
+            		<div class="layout-four__description-container">
+            			<header>Exclusive</header>
+            			<p>Fill murrays jacket</p>
+            			<span>$256.65</span>
+            		</div>
+            	</div>
+            	<div class="layout-four__item">
+            		<img src="http://fillmurray.com/320/480" alt="blah">
+            		<div class="layout-four__description-container">
+            			<header>Exclusive</header>
+            			<p>Fill murrays jacket</p>
+            			<span>$256.65</span>
+            		</div>
+            	</div>
+            	<div class="layout-four__item">
+            		<img src="http://fillmurray.com/320/480" alt="blah">
+            		<div class="layout-four__description-container">
+            			<header>Exclusive</header>
+            			<p>Fill murrays jacket</p>
+            			<span>$256.65</span>
+            		</div>
+            	</div>
+            	<div class="layout-four__item">
+            		<img src="http://fillmurray.com/320/480" alt="blah">
+            		<div class="layout-four__description-container">
+            			<header>Exclusive</header>
+            			<p>Fill murrays jacket</p>
+            			<span>$256.65</span>
+            		</div>
+            	</div>
+            	<div class="layout-four__item">
+            		<img src="http://fillmurray.com/320/480" alt="blah">
+            		<div class="layout-four__description-container">
+            			<header>Exclusive</header>
+            			<p>Fill murrays jacket</p>
+            			<span>$256.65</span>
+            		</div>
+            	</div>
+            </div>        </div>
+
+    </div>
+</div>
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div style=&quot;overflow: hidden;&quot;&gt;
+    &lt;div class=&quot;hamburger-menu__icon-container&quot;&gt;
+       &lt;img class=&quot;hamburger-menu__icon&quot; src=&quot;/img/hamburger_menu.svg&quot; alt=&quot;&quot;/&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;hamburger-menu&quot;&gt;
+     &lt;ul class=&quot;hamburger-menu__list-outer&quot;&gt;
+         &lt;li&gt;
+             &lt;a class=&quot;hamburger-menu__link-outer&quot; href=&quot;#&quot;&gt;NEW ARRIVALS&lt;/a&gt;
+         &lt;/li&gt;
+         &lt;li&gt;
+             &lt;a class=&quot;hamburger-menu__link-outer&quot; href=&quot;#&quot;&gt;SWIM&lt;/a&gt;
+             &lt;ul class=&quot;hamburger-menu__list&quot;&gt;
+                 &lt;li&gt;
+                     &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Tops&lt;/a&gt;
+                 &lt;/li&gt;
+                 &lt;li&gt;
+                     &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Bottoms&lt;/a&gt;
+                 &lt;/li&gt;
+                 &lt;li&gt;
+                     &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• One Pieces&lt;/a&gt;
+                 &lt;/li&gt;
+                 &lt;li&gt;
+                     &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Neoprene&lt;/a&gt;
+                 &lt;/li&gt;
+             &lt;/ul&gt;
+         &lt;/li&gt;
+         &lt;li&gt;
+             &lt;a class=&quot;hamburger-menu__link-outer&quot; href=&quot;#&quot;&gt;COLLECTION&lt;/a&gt;
+             &lt;ul class=&quot;hamburger-menu__list&quot;&gt;
+                 &lt;li&gt;
+                     &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Tops&lt;/a&gt;
+                 &lt;/li&gt;
+                 &lt;li&gt;
+                     &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Bottoms&lt;/a&gt;
+                 &lt;/li&gt;
+                 &lt;li&gt;
+                     &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Dresses&lt;/a&gt;
+                 &lt;/li&gt;
+                 &lt;li&gt;
+                     &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Jumpsuits&lt;/a&gt;
+                 &lt;/li&gt;
+                 &lt;li&gt;
+                     &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Lace&lt;/a&gt;
+                 &lt;/li&gt;
+                 &lt;li&gt;
+                     &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Crochet&lt;/a&gt;
+                 &lt;/li&gt;
+                 &lt;li&gt;
+                     &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Knits&lt;/a&gt;
+                 &lt;/li&gt;
+                 &lt;li&gt;
+                     &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Leather&lt;/a&gt;
+                 &lt;/li&gt;
+             &lt;/ul&gt;
+         &lt;/li&gt;
+         &lt;li&gt;
+             &lt;a class=&quot;hamburger-menu__link-outer&quot; href=&quot;#&quot;&gt;STAPLES&lt;/a&gt;
+             &lt;ul class=&quot;hamburger-menu__list&quot;&gt;
+                 &lt;li&gt;
+                     &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Tops&lt;/a&gt;
+                 &lt;/li&gt;
+                 &lt;li&gt;
+                     &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Bottoms&lt;/a&gt;
+                 &lt;/li&gt;
+                 &lt;li&gt;
+                     &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Dresses&lt;/a&gt;
+                 &lt;/li&gt;
+             &lt;/ul&gt;
+         &lt;/li&gt;
+         &lt;li&gt;
+             &lt;a class=&quot;hamburger-menu__link-outer&quot; href=&quot;#&quot;&gt;SALE&lt;/a&gt;
+             &lt;ul class=&quot;hamburger-menu__list&quot;&gt;
+                 &lt;li&gt;
+                     &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Tops&lt;/a&gt;
+                 &lt;/li&gt;
+                 &lt;li&gt;
+                     &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Bottoms&lt;/a&gt;
+                 &lt;/li&gt;
+                 &lt;li&gt;
+                     &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Dresses&lt;/a&gt;
+                 &lt;/li&gt;
+                 &lt;li&gt;
+                     &lt;a class=&quot;hamburger-menu__link-inner&quot; href=&quot;#&quot;&gt;• Staples&lt;/a&gt;
+                 &lt;/li&gt;
+             &lt;/ul&gt;
+         &lt;/li&gt;
+         &lt;li&gt;
+             &lt;a class=&quot;hamburger-menu__link-outer&quot; href=&quot;#&quot;&gt;ACCESSORIES&lt;/a&gt;
+         &lt;/li&gt;
+         &lt;li&gt;
+             &lt;a class=&quot;hamburger-menu__link-outer&quot; href=&quot;#&quot;&gt;ART&lt;/a&gt;
+         &lt;/li&gt;
+     &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    
+    &lt;div class=&quot;content-wrapper&quot;&gt;
+    &lt;div class=&quot;header-centered clearfix&quot;&gt;
+            &lt;div class=&quot;logo&quot;&gt;          
+              &lt;a href=&quot;/&quot;&gt;&lt;img src=&quot;//cdn.shopify.com/s/files/1/0243/7257/t/5/assets/logo.png?1303396216	5253190557&quot; alt=&quot;Rue Stiic&quot;&gt;&lt;/a&gt;
+            &lt;/div&gt; 
+    &lt;/div&gt;
+    
+    &lt;section class=&#x27;header-nav&#x27;&gt;
+    	&lt;nav class=&#x27;header-nav__main&#x27;&gt;
+    		&lt;ul class=&quot;header-nav__collection&quot;&gt;
+    			&lt;li class=&quot;header-nav__item&quot;&gt;
+    				&lt;a href=&quot;#&quot;&gt;Lorem.&lt;/a&gt;
+    			&lt;/li&gt;
+    			&lt;li class=&quot;header-nav__item&quot;&gt;
+    				&lt;a href=&quot;#&quot;&gt;Quia.&lt;/a&gt;
+    			&lt;/li&gt;
+    			&lt;li class=&quot;header-nav__item&quot;&gt;
+    				&lt;a href=&quot;#&quot;&gt;Quos.&lt;/a&gt;
+    			&lt;/li&gt;
+    			&lt;li class=&quot;header-nav__item&quot;&gt;
+    				&lt;a href=&quot;#&quot;&gt;Saepe.&lt;/a&gt;
+    			&lt;/li&gt;
+    			&lt;li class=&quot;header-nav__item&quot;&gt;
+    				&lt;a href=&quot;#&quot;&gt;Reprehenderit.&lt;/a&gt;
+    			&lt;/li&gt;
+    			&lt;li class=&quot;header-nav__item&quot;&gt;
+    				&lt;a href=&quot;#&quot;&gt;Illo.&lt;/a&gt;
+    			&lt;/li&gt;
+    			&lt;li class=&quot;header-nav__item&quot;&gt;
+    				&lt;a href=&quot;&quot;&gt;Lorem.&lt;/a&gt;
+    			&lt;/li&gt;
+    		&lt;/ul&gt;
+    	&lt;/nav&gt;
+    &lt;/section&gt;
+        &lt;div class=&quot;layout-sidebar__side&quot;&gt;
+            &lt;ul&gt;
+                &lt;li&gt;asdf&lt;/li&gt;
+                &lt;li&gt;asdf&lt;/li&gt;
+                &lt;li&gt;asdf&lt;/li&gt;
+                &lt;li&gt;asdf&lt;/li&gt;
+                &lt;li&gt;asdf&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;layout-sidebar__main&quot;&gt;
+            &lt;div class=&quot;layout-four&quot;&gt;
+            	&lt;div class=&quot;layout-four__item&quot;&gt;
+            		&lt;img src=&quot;http://fillmurray.com/320/480&quot; alt=&quot;blah&quot;&gt;
+            		&lt;div class=&quot;layout-four__description-container&quot;&gt;
+            			&lt;header&gt;Exclusive&lt;/header&gt;
+            			&lt;p&gt;Fill murrays jacket&lt;/p&gt;
+            			&lt;span&gt;$256.65&lt;/span&gt;
+            		&lt;/div&gt;
+            	&lt;/div&gt;
+            	&lt;div class=&quot;layout-four__item&quot;&gt;
+            		&lt;img src=&quot;http://fillmurray.com/320/480&quot; alt=&quot;blah&quot;&gt;
+            		&lt;div class=&quot;layout-four__description-container&quot;&gt;
+            			&lt;header&gt;Exclusive&lt;/header&gt;
+            			&lt;p&gt;Fill murrays jacket&lt;/p&gt;
+            			&lt;span&gt;$256.65&lt;/span&gt;
+            		&lt;/div&gt;
+            	&lt;/div&gt;
+            	&lt;div class=&quot;layout-four__item&quot;&gt;
+            		&lt;img src=&quot;http://fillmurray.com/320/480&quot; alt=&quot;blah&quot;&gt;
+            		&lt;div class=&quot;layout-four__description-container&quot;&gt;
+            			&lt;header&gt;Exclusive&lt;/header&gt;
+            			&lt;p&gt;Fill murrays jacket&lt;/p&gt;
+            			&lt;span&gt;$256.65&lt;/span&gt;
+            		&lt;/div&gt;
+            	&lt;/div&gt;
+            	&lt;div class=&quot;layout-four__item&quot;&gt;
+            		&lt;img src=&quot;http://fillmurray.com/320/480&quot; alt=&quot;blah&quot;&gt;
+            		&lt;div class=&quot;layout-four__description-container&quot;&gt;
+            			&lt;header&gt;Exclusive&lt;/header&gt;
+            			&lt;p&gt;Fill murrays jacket&lt;/p&gt;
+            			&lt;span&gt;$256.65&lt;/span&gt;
+            		&lt;/div&gt;
+            	&lt;/div&gt;
+            	&lt;div class=&quot;layout-four__item&quot;&gt;
+            		&lt;img src=&quot;http://fillmurray.com/320/480&quot; alt=&quot;blah&quot;&gt;
+            		&lt;div class=&quot;layout-four__description-container&quot;&gt;
+            			&lt;header&gt;Exclusive&lt;/header&gt;
+            			&lt;p&gt;Fill murrays jacket&lt;/p&gt;
+            			&lt;span&gt;$256.65&lt;/span&gt;
+            		&lt;/div&gt;
+            	&lt;/div&gt;
+            	&lt;div class=&quot;layout-four__item&quot;&gt;
+            		&lt;img src=&quot;http://fillmurray.com/320/480&quot; alt=&quot;blah&quot;&gt;
+            		&lt;div class=&quot;layout-four__description-container&quot;&gt;
+            			&lt;header&gt;Exclusive&lt;/header&gt;
+            			&lt;p&gt;Fill murrays jacket&lt;/p&gt;
+            			&lt;span&gt;$256.65&lt;/span&gt;
+            		&lt;/div&gt;
+            	&lt;/div&gt;
+            	&lt;div class=&quot;layout-four__item&quot;&gt;
+            		&lt;img src=&quot;http://fillmurray.com/320/480&quot; alt=&quot;blah&quot;&gt;
+            		&lt;div class=&quot;layout-four__description-container&quot;&gt;
+            			&lt;header&gt;Exclusive&lt;/header&gt;
+            			&lt;p&gt;Fill murrays jacket&lt;/p&gt;
+            			&lt;span&gt;$256.65&lt;/span&gt;
+            		&lt;/div&gt;
+            	&lt;/div&gt;
+            	&lt;div class=&quot;layout-four__item&quot;&gt;
+            		&lt;img src=&quot;http://fillmurray.com/320/480&quot; alt=&quot;blah&quot;&gt;
+            		&lt;div class=&quot;layout-four__description-container&quot;&gt;
+            			&lt;header&gt;Exclusive&lt;/header&gt;
+            			&lt;p&gt;Fill murrays jacket&lt;/p&gt;
+            			&lt;span&gt;$256.65&lt;/span&gt;
+            		&lt;/div&gt;
+            	&lt;/div&gt;
+            &lt;/div&gt;        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
       </div>
 
       </section>
