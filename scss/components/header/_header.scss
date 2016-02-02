@@ -45,6 +45,24 @@
 	}
 }
 
+.header-nav__list-1,
+%header-nav__list-1 {
+  display: none;
+
+  li:first-child {
+	background: red;
+  }
+}
+
+.header-nav__list-2,
+%header-nav__list-2 {
+  display: none;
+}
+
+.header-nav__list--active,
+%header-nav__list--active {
+  display: block;
+}
 
 
 

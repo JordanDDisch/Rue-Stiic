@@ -11,7 +11,7 @@
   position: fixed;
   transform: translate3d(-200px,0,0);
   transition: transform .5s cubic-bezier(.16, .68, .43, .99);
-  width: 18rem;
+  width: 200px;
   height: 100%;
   top: 0;
   clear: both;
@@ -121,7 +121,7 @@
 %hamburger-menu__icon-container {
   width: 100%;
   overflow: hidden;
-  transform: translate3d(200,0,0);
+  transform: translate3d(0,0,0);
   transition: transform .5s cubic-bezier(.16, .68, .43, .99);
 }
 
