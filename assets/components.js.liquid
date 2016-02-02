@@ -1,6 +1,4 @@
 jQuery(function ($) {
-    var sf, body;
-    var breakpoint = 1180;
 
     $(document).ready(function ($) {
 
@@ -10,11 +8,30 @@ jQuery(function ($) {
             $(".hamburger-menu").toggleClass("hamburger-menu--active");
         });
 
-        $('.hamburger-menu ul li').click(function(event) {
+        $('.hamburger-menu__list-outer li').click(function(event) {
             if($(this).find('ul').hasClass('hamburger-menu__list--active') == false) {
-                event.preventDefault();
-                $(this).find('ul').addClass('hamburger-menu__list--active');
+                if($(this).children().length > 1) {
+                    event.preventDefault();
+                    $(this).find('ul').addClass('hamburger-menu__list--active');
+                }
             }
         });
     })
+});
+jQuery(function ($) {
+
+    $(document).ready(function ($) {
+        $(".header-nav__item").hover(function() {
+            if($(this).children().length > 1) {
+                $(this).find(".header-nav__list-1").toggleClass("header-nav__list--active");
+            }
+        });
+
+        $(".header-nav__list-1 li").hover(function() {
+            if($(this).children().length > 1) {
+                $(this).find(".header-nav__list-2").toggleClass("header-nav__list--active");
+            }
+        })
+    })
+
 });
