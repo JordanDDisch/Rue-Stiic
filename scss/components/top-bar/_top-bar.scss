@@ -1,0 +1,16 @@
+// Top Bar
+//
+// Markup: top-bar.html
+//
+// Styleguide: components.top-bar
+
+.top-bar,
+ %top-bar {
+   overflow: hidden;
+
+   @include breakpoint(768px) {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+   }
+ }

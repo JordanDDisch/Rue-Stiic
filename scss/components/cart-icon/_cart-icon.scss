@@ -1,0 +1,32 @@
+// Cart Icon
+//
+// Markup: cart-icon.html
+//
+// Styleguide: components.cart-icon
+
+.cart-icon,
+%cart-icon {
+  width: 60px;
+  text-decoration: none;
+  color: black;
+
+  @include breakpoint(768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.cart-icon__image,
+%cart-icon__image {
+  width: 14px;
+}
+
+.cart-icon__name,
+%cart-icon__name {
+  display: none;
+
+  @include breakpoint(768px) {
+    display: block;
+  }
+}
