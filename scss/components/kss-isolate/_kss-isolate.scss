@@ -1,0 +1,29 @@
+.kss-isolate--hide,
+%kss-isolate--hide {
+  display: none;
+}
+
+.kss-isolate__background,
+%kss-isolate__background {
+  background: none;
+}
+
+.kss-isolate__padding,
+%kss-isolate__padding {
+  padding: 0 !important;
+}
+
+.kss-isolate__margin,
+%kss-isolate__margin {
+  margin: 0 !important;
+}
+
+.kss-isolate__width,
+%kss-isolate__width {
+  width: 100% !important;
+}
+
+.kss-isolate__max-width,
+%kss-isolate__max-width {
+  max-width: 100% !important;
+}
