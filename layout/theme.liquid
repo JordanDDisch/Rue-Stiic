@@ -83,30 +83,6 @@
     <div id="transparency" class="content-wrapper">
       <div class="hamburger-menu__wrapper">
 
-        <div class="search__wrapper">
-
-          <! Begin search !>
-          <div class="search__button">
-            <div class="search__text">Search</div>
-            <img class="search__button-image" src="{{ 'search-button.svg' | asset_url }}" alt=""/>
-          </div>
-
-          <form class="search search--hidden" action="/search">
-            <input class="search__input" type="text" placeholder="search store..." name="q" value=""  />
-            <input class="search__submit" type="submit" value="" style="background-image=url({{ 'search-button.svg' | asset_url }})"/>
-            <img class="search__close" src="{{ 'search-close.svg' | asset_url }}" alt=""/>
-          </form>
-          <! End search !>
-
-          <! Begin cart !>
-          <a class="cart-icon" href="/cart">
-              <div class="cart-icon__name">Cart</div>
-              <img class="cart-icon__image" src="{{ 'shopping-cart.svg' | asset_url }}" alt=""/>
-          </a>
-          <! End cart !>
-
-      		</div>
-
         <!-- Begin right navigation -->
         {% if settings.navigation_alignment == "right" %}
         <div class="row" id="header">
@@ -132,9 +108,33 @@
               </div> 
             </section> 
           </div> 
-        </div> 
+        </div>
         {% endif %}
         <!-- End right navigation -->
+
+        <div class="search__wrapper">
+
+          <! Begin search !>
+          <div class="search__button">
+            <a class="search__text">Search</a>
+            <img class="search__button-image" src="{{ 'search-button.svg' | asset_url }}" alt=""/>
+          </div>
+
+          <form class="search search--hidden" action="/search">
+            <input class="search__input" type="text" placeholder="search store..." name="q" value=""  />
+            <input class="search__submit" type="submit" value="" style="background-image=url({{ 'search-button.svg' | asset_url }})"/>
+            <img class="search__close" src="{{ 'search-close.svg' | asset_url }}" alt=""/>
+          </form>
+          <! End search !>
+
+          <! Begin cart !>
+          <a class="cart-icon" href="/cart">
+              <div class="cart-icon__name">Cart</div>
+              <img class="cart-icon__image" src="{{ 'shopping-cart.svg' | asset_url }}" alt=""/>
+          </a>
+          <! End cart !>
+
+        </div>
         
         <!-- Begin below navigation -->
         {% if settings.navigation_alignment == "below" %}
