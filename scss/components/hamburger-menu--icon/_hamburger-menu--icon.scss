@@ -1,0 +1,26 @@
+// Hamburger Menu Icon
+//
+// Markup: hamburger-menu--icon.html
+//
+// Styleguide: components.hamburger-menu--icon
+
+@import 'components/layout-four/layout-four';
+
+.hamburger-menu__icon,
+%hamburger-menu__icon {
+  cursor: pointer;
+  display: block;
+  padding: 1em;
+
+  @include breakpoint($layout-four__large) {
+    display: none;
+  }
+}
+
+.hamburger-menu__icon-container,
+%hamburger-menu__icon-container {
+  width: 100%;
+  overflow: hidden;
+  transform: translate3d(0,0,0);
+  transition: transform .5s cubic-bezier(.16, .68, .43, .99);
+}

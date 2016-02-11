@@ -51,6 +51,8 @@
 <body>
 
   <div style="overflow: hidden;">
+
+  <! Begin hamburger menu !>
   <div class="hamburger-menu__icon-container">
     <div class="hamburger-menu__icon">
        <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
@@ -75,37 +77,35 @@
     {% endfor %}
     </ul>
   </div>
-
-  <!-- Begin toolbar -->
-  <div class="toolbar-wrapper">
-    <div class="toolbar clearfix">
-      <div class="span12 clearfix">
-        <ul class="unstyled">
-          <li class="search-field">
-            <form class="search" action="/search">
-              <input type="image" src="{{ 'icon-search.png' | asset_url }}" alt="Go" id="go">
-              <input type="text" name="q" class="search_box" placeholder="Search" value="{{ search.terms }}" x-webkit-speech />
-            </form>
-          </li>
-          {% if cart.item_count != 0 %}
-          <li id="checkout-link"><a href="/cart" title="Checkout">Checkout</a></li>
-          {% endif %}
-          <li><span class="icon-cart"></span><a href="/cart" class="cart" title="Shopping Cart">Cart: {{ cart.item_count }}</a></li>
-          {% include 'customer_links' %}
-          {% if settings.top_bar_linklist != blank %}
-          {% for link in linklists[settings.top_bar_linklist].links %}
-          <li><a href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a></li>
-          {% endfor %}
-          {% endif %}
-        </ul>
-      </div>
-    </div>
-  </div>
-  <!-- End toolbar -->
+  <! End hamburger menu !>
 
   <!-- Begin wrapper -->
     <div id="transparency" class="content-wrapper">
       <div class="hamburger-menu__wrapper">
+
+        <div class="search__wrapper">
+
+          <! Begin search !>
+          <div class="search__button">
+            <div class="search__text">Search</div>
+            <img class="search__button-image" src="{{ 'search-button.svg' | asset_url }}" alt=""/>
+          </div>
+
+          <form class="search search--hidden" action="/search">
+            <input class="search__input" type="text" placeholder="search store..." name="q" value=""  />
+            <input class="search__submit" type="submit" value="" style="background-image=url({{ 'search-button.svg' | asset_url }})"/>
+            <img class="search__close" src="{{ 'search-close.svg' | asset_url }}" alt=""/>
+          </form>
+          <! End search !>
+
+          <! Begin cart !>
+          <a class="cart-icon" href="/cart">
+              <div class="cart-icon__name">Cart</div>
+              <img class="cart-icon__image" src="{{ 'shopping-cart.svg' | asset_url }}" alt=""/>
+          </a>
+          <! End cart !>
+
+      		</div>
 
         <!-- Begin right navigation -->
         {% if settings.navigation_alignment == "right" %}
@@ -333,9 +333,6 @@
           </ul> <!-- /.credit-cards -->
         </div>
         <!-- End copyright -->
-        
-         <!--Begin New Nav -->
-     
 
       </div>
     </footer>

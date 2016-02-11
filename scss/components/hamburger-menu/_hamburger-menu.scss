@@ -11,7 +11,7 @@
   position: fixed;
   transform: translate3d(-200px,0,0);
   transition: transform .5s cubic-bezier(.16, .68, .43, .99);
-  width: 18rem;
+  width: 200px;
   height: 100%;
   top: 0;
   clear: both;
@@ -61,22 +61,12 @@
   }
 }
 
-.hamburger-menu__icon,
-%hamburger-menu__icon {
-  cursor: pointer;
-  display: block;
-  padding: 1em;
-
-  @include breakpoint($layout-four__large) {
-    display: none;
-  }
-}
-
 .hamburger-menu__list-outer,
 %hamburger-menu__list-outer {
   list-style-type: none;
   margin: 0;
   padding-left: 1rem;
+
   @include breakpoint($layout-four__large) {
     padding: 0;
   }
@@ -114,14 +104,6 @@
 .hamburger-menu__list--active,
 %hamburger-menu__list--active {
   display: block;
-}
-
-.hamburger-menu__icon-container,
-%hamburger-menu__icon-container {
-  width: 100%;
-  overflow: hidden;
-  transform: translate3d(200,0,0);
-  transition: transform .5s cubic-bezier(.16, .68, .43, .99);
 }
 
 .hamburger-menu__wrapper,

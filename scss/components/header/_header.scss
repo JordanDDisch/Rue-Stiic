@@ -11,6 +11,10 @@
 	text-align: center;
 	margin-bottom: 2.5rem;
 	width: 100%;
+
+  @include breakpoint(768px) {
+	display: flex;
+  }
 }
 
 .header-nav,
@@ -45,6 +49,33 @@
 	}
 }
 
+.header-nav__list-1,
+%header-nav__list-1 {
+  display: none;
+
+  li:first-child {
+	background: red;
+  }
+}
+
+.header-nav__list-2,
+%header-nav__list-2 {
+  display: none;
+}
+
+.header-nav__list--active,
+%header-nav__list--active {
+  display: block;
+}
+
+.search__wrapper,
+%search__wrapper {
+  float: none;
+
+  @include breakpoint(768px) {
+    float: right;
+  }
+}
 
 
 

@@ -10,7 +10,7 @@
 
 .content-wrapper--active,
 %content-wrapper--active {
-  transform: translate3d(200px,0,0);
+  transform: translate3d(200px,0,0) !important;
   transition: transform .5s cubic-bezier(.16, .68, .43, .99)
 }
 

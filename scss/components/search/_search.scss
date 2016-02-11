@@ -1,0 +1,89 @@
+// Search
+//
+// Markup: search.html
+//
+// Styleguide: components.search
+
+.search__wrapper,
+%search__wrapper {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include breakpoint(768px) {
+    display: block;
+  }
+}
+
+.search--hidden,
+%search--hidden {
+  display: none !important;
+}
+
+.search__text,
+%search__text {
+  display: none;
+
+  @include breakpoint(768px) {
+    display: inline-block;
+  }
+}
+
+.search__close,
+%search__close {
+  cursor: pointer;
+}
+
+.search__button,
+%search__button {
+
+  width: 80px;
+  cursor: pointer;
+
+  @include breakpoint(768px) {
+    width: 100%;
+    text-align: right;
+  }
+}
+
+.search__button-image,
+%search__button-image {
+  width: 15px;
+}
+
+.search,
+%search {
+  position: relative;
+  width: 300px;
+  display: flex;
+  align-items: center;
+}
+
+.search__input,
+%search__input {
+  height: 27px;
+  width: 15%;
+  border-radius: 2px;
+  border: 1px solid black;
+  font-size: 13px;
+  padding: .5rem;
+}
+
+.search__submit,
+%search__submit {
+  position: absolute;
+  top: 6px;
+  right: 52px;
+  border: 0;
+  padding: .85rem;
+  height: 1rem;
+  cursor: pointer;
+
+  background: {
+    color: transparent;
+    image: url("/img/search-button.svg");
+    repeat: no-repeat;
+    position: center;
+  }
+}
