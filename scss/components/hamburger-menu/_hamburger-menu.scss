@@ -17,6 +17,7 @@
   clear: both;
   overflow: auto;
   background: white;
+  font-weight: bold;
 
   @include breakpoint($layout-four__large) {
     position: absolute;
@@ -84,10 +85,10 @@
   display: block;
   cursor: pointer;
   text-decoration: none;
-  color: #888888;
+  color: black;
 
   &:hover {
-    color: #222222;
+    color: #888888;
   }
 }
 
@@ -99,6 +100,7 @@
 .hamburger-menu__link-inner {
   @extend %hamburger-menu__link;
   padding: .5rem;
+  font-weight: normal;
 }
 
 .hamburger-menu__list--active,
@@ -109,4 +111,8 @@
 .hamburger-menu__wrapper,
 %hamburger-menu__wrapper {
   position: relative;
+
+  @include breakpoint($layout-four__large) {
+    padding-top: 4rem;
+  }
 }

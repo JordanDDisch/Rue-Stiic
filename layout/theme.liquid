@@ -56,18 +56,14 @@
        <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
     </div>
   </div>
-  <form class="search" action="/search">
-      <input type="text" placeholder="Search" name="q" value="{{ search.terms | escape }}"  />
-      <input type="submit" value="Search" />
-  </form>
   <div class="hamburger-menu">
     <ul class="hamburger-menu__list-outer">
     {% for link in linklists.sidebar-menu.links %}
       <li>
-        <a href="{{ link.url }}" title="{{ link.title }}" class="hamburger-menu__link-outer {% if link.active %} current{% endif %}">
-          {{ link.title }}
-        </a>
         {% capture child_list_handle %}{{ link.title | handle }}{% endcapture %}
+        <a href="{{ link.url }}" title="{{ link.title }}" class="hamburger-menu__link-outer {% if link.active %} current{% endif %}">
+          {{ link.title }}{% if linklists[child_list_handle] and linklists[child_list_handle].links.size > 0 %} > {% endif %}
+        </a>
             {% if linklists[child_list_handle] and linklists[child_list_handle].links.size > 0 %}
             <ul class="hamburger-menu__list">
               {% for l in linklists[child_list_handle].links %}
@@ -115,7 +111,7 @@
         {% if settings.navigation_alignment == "right" %}
         <div class="row" id="header">
           <div class="layout-one-column border-bottom">
-            <div class="span3 inner-left">
+            <div class="header-centered span3 inner-left">
               <div class="logo">
                 {% if settings.use_logo %}
                 <a href="/"><img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" /></a>
@@ -124,14 +120,14 @@
                 {% endif %}
               </div> 
             </div> 
-            
+
+
             <section id="nav">
               <div class="span9 inner-right">
                 <nav class="main">
                   {% include 'dropdown' %}
                 </nav> 
                 <nav class="mobile clearfix">
-                  {% include 'mobile-menu' %}
                 </nav>
               </div> 
             </section> 
@@ -150,7 +146,22 @@
           {% else %}
               <h1><a href="/">{{ shop.name }}</a></h1>
           {% endif %}
-          </div> 
+          </div>
+          <div class="search__wrapper">
+            <div class="search__button">
+              <div class="search__text">Search</div>
+              <img class="search__button-image" src="{{ 'search-button.svg' | asset_url }}" alt=""/>
+            </div>
+            <form class="search search--hidden" action="/search">
+              <input class="search__input" type="text" placeholder="search store..." name="q" value="{{ search.terms | escape }}"  />
+              <input class="search__submit" type="submit" value="" />
+              <img class="search__close" src={{ 'search-close.svg' | asset_url }} alt=""/>
+            </form>
+            <a class="cart-icon" href="/cart">
+              <div class="cart-icon__name">Cart</div>
+              <img class="cart-icon__image" src="{{ 'shopping-cart.svg' | asset_url }}" alt=""/>
+            </a>
+          </div>
 
         
         <section id="nav" class="row">
@@ -159,8 +170,7 @@
               {% include 'dropdown' %}
             </nav> <!-- /.main -->
             <nav class="mobile clearfix">
-              {% include 'mobile-menu' %}
-            </nav> <!-- /.mobile --> 
+            </nav> <!-- /.mobile -->
           </div> 
         </section> 
         {% endif %}

@@ -2,24 +2,6 @@
   
   <div class="row clearfix">
     
-    <!-- Begin breadcrumb -->
-    <div class="span12">
-      <div class="breadcrumb clearfix">
-        <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ shop.url }}" title="{{ shop.name | escape }}" itemprop="url"><span itemprop="title">Home</span></a></span> 
-        <span class="arrow-space">&#62;</span>
-        <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-          {% if collection %}
-            <a href="{{ collection.url }}" title="{{ collection.title | escape }}">{{ collection.title }}</a>
-          {% else %}
-            <a href="/collections/all" title="All Products">Products</a>
-          {% endif %}
-        </span>
-        <span class="arrow-space">&#62;</span>
-        <strong>{{ product.title }}</strong>
-      </div>
-    </div>
-    <!-- End breadcrumb -->
-    
     <!-- Begin product photos -->
     <div class="{% if product.images.size == 1 or settings.thumbnails_position == 'below' %}span6{% else %}span5{% endif %}">
       

@@ -1,0 +1,5 @@
+.footer-wrapper,
+%footer-wrapper {
+  transform: translate3d(0,0,0);
+  transition: transform .5s cubic-bezier(.16,.68,.43,.99);
+}

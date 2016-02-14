@@ -10,7 +10,9 @@
   text-decoration: none;
   color: black;
 
-  @include breakpoint(768px) {
+  @include breakpoint(850px) {
+    float: right;
+    padding-top: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -26,7 +28,7 @@
 %cart-icon__name {
   display: none;
 
-  @include breakpoint(768px) {
+  @include breakpoint(850px) {
     display: block;
   }
 }

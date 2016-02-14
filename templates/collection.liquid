@@ -18,10 +18,10 @@
     <ul class="hamburger-menu__list-outer">
     {% for link in linklists.sidebar-menu.links %}
       <li>
-        <a href="{{ link.url }}" title="{{ link.title }}" class="hamburger-menu__link-outer {% if link.active %} current{% endif %}">
-          {{ link.title }}
-        </a>
         {% capture child_list_handle %}{{ link.title | handle }}{% endcapture %}
+        <a href="{{ link.url }}" title="{{ link.title }}" class="hamburger-menu__link-outer {% if link.active %} current{% endif %}">
+          {{ link.title }}{% if linklists[child_list_handle] and linklists[child_list_handle].links.size > 0 %} > {% endif %}
+        </a>
             {% if linklists[child_list_handle] and linklists[child_list_handle].links.size > 0 %}
             <ul class="hamburger-menu__list">
               {% for l in linklists[child_list_handle].links %}

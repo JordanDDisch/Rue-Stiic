@@ -6,6 +6,7 @@ jQuery(function ($) {
             $(".content-wrapper").toggleClass("content-wrapper--active");
             $(".hamburger-menu__icon-container").toggleClass("content-wrapper--active");
             $(".hamburger-menu").toggleClass("hamburger-menu--active");
+            $(".footer-wrapper").toggleClass("content-wrapper--active");
         });
 
         $('.hamburger-menu__list-outer li').click(function(event) {

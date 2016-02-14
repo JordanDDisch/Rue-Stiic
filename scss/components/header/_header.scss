@@ -6,13 +6,18 @@
 
 @import 'components/layout-four/layout-four';
 
+.header__wrapper,
+%header__wrappper {
+  position: relative;
+}
+
 .header-centered,
 %header-centered {
 	text-align: center;
 	margin-bottom: 2.5rem;
 	width: 100%;
 
-  @include breakpoint(768px) {
+  @include breakpoint(850px) {
 	display: flex;
   }
 }

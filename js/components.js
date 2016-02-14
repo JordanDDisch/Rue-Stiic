@@ -6,6 +6,7 @@ jQuery(function ($) {
             $(".content-wrapper").toggleClass("content-wrapper--active");
             $(".hamburger-menu__icon-container").toggleClass("content-wrapper--active");
             $(".hamburger-menu").toggleClass("hamburger-menu--active");
+            $(".footer-wrapper").toggleClass("content-wrapper--active");
         });
 
         $('.hamburger-menu__list-outer li').click(function(event) {
@@ -15,19 +16,6 @@ jQuery(function ($) {
                     $(this).find('ul').addClass('hamburger-menu__list--active');
                 }
             }
-        });
-    })
-});
-jQuery(function($){
-    $(document).ready(function($) {
-        console.log("asdf");
-        $(".search__button").click(function() {
-            $(".search__button").toggleClass("search--hidden");
-            $(".search").toggleClass("search--hidden");
-        });
-        $(".search__close").click(function() {
-            $(".search__button").toggleClass("search--hidden");
-            $(".search").toggleClass("search--hidden");
         });
     })
 });
@@ -47,4 +35,18 @@ jQuery(function ($) {
         })
     })
 
+});
+
+jQuery(function($){
+    $(document).ready(function($) {
+        console.log("asdf");
+        $(".search__button").click(function() {
+            $(".search__button").toggleClass("search--hidden");
+            $(".search").toggleClass("search--hidden");
+        });
+        $(".search__close").click(function() {
+            $(".search__button").toggleClass("search--hidden");
+            $(".search").toggleClass("search--hidden");
+        });
+    })
 });

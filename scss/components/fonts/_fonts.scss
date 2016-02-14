@@ -1,0 +1,13 @@
+$black: #000000;
+$small: 12px;
+$medium: 14px;
+
+* {
+  color: $black;
+}
+
+.purchase {
+  .money {
+    font-size: $medium !important;
+  }
+}

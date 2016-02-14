@@ -4,6 +4,19 @@
 //
 // Styleguide: components.search
 
+.search,
+%search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  float: right;
+
+  @include breakpoint(850px) {
+    width: 100%;
+  }
+}
+
 .search__wrapper,
 %search__wrapper {
   overflow: hidden;
@@ -11,8 +24,18 @@
   justify-content: center;
   align-items: center;
 
-  @include breakpoint(768px) {
+  @include breakpoint(850px) {
     display: block;
+    position: absolute;
+    right: 0;
+    top: 4%;
+    padding-right: 2rem;
+  }
+  @include breakpoint(1179px) {
+    position: absolute;
+    right: 0;
+    top: 3%;
+    z-index: 999;
   }
 }
 
@@ -25,7 +48,7 @@
 %search__text {
   display: none;
 
-  @include breakpoint(768px) {
+  @include breakpoint(850px) {
     display: inline-block;
   }
 }
@@ -33,6 +56,7 @@
 .search__close,
 %search__close {
   cursor: pointer;
+  height: 28px;
 }
 
 .search__button,
@@ -40,8 +64,9 @@
 
   width: 80px;
   cursor: pointer;
+  text-align: center;
 
-  @include breakpoint(768px) {
+  @include breakpoint(850px) {
     width: 100%;
     text-align: right;
   }
@@ -50,14 +75,6 @@
 .search__button-image,
 %search__button-image {
   width: 15px;
-}
-
-.search,
-%search {
-  position: relative;
-  width: 300px;
-  display: flex;
-  align-items: center;
 }
 
 .search__input,
@@ -73,16 +90,16 @@
 .search__submit,
 %search__submit {
   position: absolute;
-  top: 6px;
-  right: 52px;
+  top: 4px;
+  right: 38px;
   border: 0;
-  padding: .85rem;
+  padding: 1rem;
   height: 1rem;
   cursor: pointer;
 
   background: {
     color: transparent;
-    image: url("/img/search-button.svg");
+    image: url('search-button.svg');
     repeat: no-repeat;
     position: center;
   }

@@ -54,7 +54,12 @@
 
 .side-menu__link-inner {
   @extend %hamburger-menu__link;
+  color: black;
   padding: .5rem;
+
+  &:hover {
+	color: #888888;
+  }
 }
 
 .side-menu__list--active,

@@ -20,7 +20,7 @@
 .logo {
   @extend %layout-one;
 
-  @include breakpoint(768px) {
+  @include breakpoint(850px) {
 	flex: 2;
   }
 }

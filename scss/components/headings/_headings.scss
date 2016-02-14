@@ -1,0 +1,18 @@
+.headings__center,
+%headings__center {
+  text-align: center;
+}
+
+.headings__left,
+%headings__left {
+  text-align: left;
+}
+
+h1 {
+  @extend %headings__center;
+}
+
+// fugly
+#product h1 {
+  @extend %headings__left;
+}
